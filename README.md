@@ -1,5 +1,5 @@
 # Amazon-MWS-PHP-ClientLibrary
-A copy and paste of all the Amazon Marketplace Web Service PHP Client Libraries made available by Amazon, with their samples.
-Also namespaced.
+An unofficial copy of all the official Amazon Marketplace Web Service PHP Client Libraries.
+I'm attempting to namespace them.
 
 Doesn't include amzn/login-and-pay-with-amazon-sdk-php .

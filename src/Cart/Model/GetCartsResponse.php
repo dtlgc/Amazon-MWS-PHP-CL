@@ -1,4 +1,6 @@
 <?php
+namespace Amazon\MWS\Cart\Model;
+use Amazon\MWS\Cart\MWSCartService_Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -25,24 +27,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MWSCartService_Model_ListCartsResponse
+ * MWSCartService_Model_GetCartsResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>ListCartsResult: MWSCartService_Model_ListCartsResult</li>
+ * <li>GetCartsResult: MWSCartService_Model_GetCartsResult</li>
  * <li>ResponseMetadata: MWSCartService_Model_ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: MWSCartService_Model_ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MWSCartService_Model_ListCartsResponse extends MWSCartService_Model {
+ class MWSCartService_Model_GetCartsResponse extends MWSCartService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ListCartsResult' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ListCartsResult'),
+    'GetCartsResult' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_GetCartsResult'),
     'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseMetadata'),
     'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseHeaderMetadata'),
     );
@@ -50,48 +52,48 @@ require_once (dirname(__FILE__) . '/../Model.php');
     }
 
     /**
-     * Get the value of the ListCartsResult property.
+     * Get the value of the GetCartsResult property.
      *
-     * @return ListCartsResult ListCartsResult.
+     * @return GetCartsResult GetCartsResult.
      */
-    public function getListCartsResult()
+    public function getGetCartsResult()
     {
-        return $this->_fields['ListCartsResult']['FieldValue'];
+        return $this->_fields['GetCartsResult']['FieldValue'];
     }
 
     /**
-     * Set the value of the ListCartsResult property.
+     * Set the value of the GetCartsResult property.
      *
-     * @param MWSCartService_Model_ListCartsResult listCartsResult
+     * @param MWSCartService_Model_GetCartsResult getCartsResult
      * @return this instance
      */
-    public function setListCartsResult($value)
+    public function setGetCartsResult($value)
     {
-        $this->_fields['ListCartsResult']['FieldValue'] = $value;
+        $this->_fields['GetCartsResult']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Check to see if ListCartsResult is set.
+     * Check to see if GetCartsResult is set.
      *
-     * @return true if ListCartsResult is set.
+     * @return true if GetCartsResult is set.
      */
-    public function isSetListCartsResult()
+    public function isSetGetCartsResult()
     {
-                return !is_null($this->_fields['ListCartsResult']['FieldValue']);
+                return !is_null($this->_fields['GetCartsResult']['FieldValue']);
             }
 
     /**
-     * Set the value of ListCartsResult, return this.
+     * Set the value of GetCartsResult, return this.
      *
-     * @param listCartsResult
+     * @param getCartsResult
      *             The new value to set.
      *
      * @return This instance.
      */
-    public function withListCartsResult($value)
+    public function withGetCartsResult($value)
     {
-        $this->setListCartsResult($value);
+        $this->setGetCartsResult($value);
         return $this;
     }
 
@@ -187,24 +189,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MWSCartService_Model_ListCartsResponse from XML string
+     * Construct MWSCartService_Model_GetCartsResponse from XML string
      * 
      * @param $xml
      *        XML string to construct from
      *
-     * @return MWSCartService_Model_ListCartsResponse 
+     * @return MWSCartService_Model_GetCartsResponse 
      */
     public static function fromXML($xml)
     {
         $dom = new DOMDocument();
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
-        $response = $xpath->query("//*[local-name()='ListCartsResponse']");
+        $response = $xpath->query("//*[local-name()='GetCartsResponse']");
         if ($response->length == 1) {
-            return new MWSCartService_Model_ListCartsResponse(($response->item(0))); 
+            return new MWSCartService_Model_GetCartsResponse(($response->item(0))); 
         } else {
-            throw new Exception ("Unable to construct MWSCartService_Model_ListCartsResponse from provided XML. 
-                                  Make sure that ListCartsResponse is a root element");
+            throw new Exception ("Unable to construct MWSCartService_Model_GetCartsResponse from provided XML. 
+                                  Make sure that GetCartsResponse is a root element");
         }
     }
     /**
@@ -215,9 +217,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function toXML() 
     {
         $xml = "";
-        $xml .= "<ListCartsResponse xmlns=\"http://mws.amazonservices.com/schema/CartInformation/2014-03-01\">";
+        $xml .= "<GetCartsResponse xmlns=\"http://mws.amazonservices.com/schema/CartInformation/2014-03-01\">";
         $xml .= $this->_toXMLFragment();
-        $xml .= "</ListCartsResponse>";
+        $xml .= "</GetCartsResponse>";
         return $xml;
     }
 

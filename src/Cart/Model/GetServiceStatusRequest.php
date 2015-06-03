@@ -1,4 +1,6 @@
 <?php
+namespace Amazon\MWS\Cart\Model;
+use Amazon\MWS\Cart\MWSCartService_Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -25,28 +27,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MWSCartService_Model_GetCartsRequest
+ * MWSCartService_Model_GetServiceStatusRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
- * <li>MarketplaceId: string</li>
- * <li>CartIdList: array</li>
  *
  * </ul>
  */
 
- class MWSCartService_Model_GetCartsRequest extends MWSCartService_Model {
+ class MWSCartService_Model_GetServiceStatusRequest extends MWSCartService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CartIdList' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'CartId'),
     );
     parent::__construct($data);
     }
@@ -140,116 +138,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function withMWSAuthToken($value)
     {
         $this->setMWSAuthToken($value);
-        return $this;
-    }
-
-    /**
-     * Get the value of the MarketplaceId property.
-     *
-     * @return String MarketplaceId.
-     */
-    public function getMarketplaceId()
-    {
-        return $this->_fields['MarketplaceId']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the MarketplaceId property.
-     *
-     * @param string marketplaceId
-     * @return this instance
-     */
-    public function setMarketplaceId($value)
-    {
-        $this->_fields['MarketplaceId']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Check to see if MarketplaceId is set.
-     *
-     * @return true if MarketplaceId is set.
-     */
-    public function isSetMarketplaceId()
-    {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
-
-    /**
-     * Set the value of MarketplaceId, return this.
-     *
-     * @param marketplaceId
-     *             The new value to set.
-     *
-     * @return This instance.
-     */
-    public function withMarketplaceId($value)
-    {
-        $this->setMarketplaceId($value);
-        return $this;
-    }
-
-    /**
-     * Get the value of the CartIdList property.
-     *
-     * @return List<String> CartIdList.
-     */
-    public function getCartIdList()
-    {
-        if ($this->_fields['CartIdList']['FieldValue'] == null)
-        {
-            $this->_fields['CartIdList']['FieldValue'] = array();
-        }
-        return $this->_fields['CartIdList']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the CartIdList property.
-     *
-     * @param array cartIdList
-     * @return this instance
-     */
-    public function setCartIdList($value)
-    {
-        if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
-        }
-        $this->_fields['CartIdList']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Clear CartIdList.
-     */
-    public function unsetCartIdList()
-    {
-        $this->_fields['CartIdList']['FieldValue'] = array();
-    }
-
-    /**
-     * Check to see if CartIdList is set.
-     *
-     * @return true if CartIdList is set.
-     */
-    public function isSetCartIdList()
-    {
-                return !empty($this->_fields['CartIdList']['FieldValue']);
-            }
-
-    /**
-     * Add values for CartIdList, return this.
-     *
-     * @param cartIdList
-     *             New values to add.
-     *
-     * @return This instance.
-     */
-    public function withCartIdList()
-    {
-        foreach (func_get_args() as $CartIdList)
-        {
-            $this->_fields['CartIdList']['FieldValue'][] = $CartIdList;
-        }
         return $this;
     }
 

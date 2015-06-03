@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Cart\Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -25,7 +26,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MWSCartService_Model_ListCartsResult
+ * MWSCartService_Model_ListCartsByNextTokenResult
  * 
  * Properties:
  * <ul>
@@ -36,7 +37,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSCartService_Model_ListCartsResult extends MWSCartService_Model {
+ class MWSCartService_Model_ListCartsByNextTokenResult extends MWSCartService_Model {
 
     public function __construct($data = null)
     {

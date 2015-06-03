@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Cart\Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -25,24 +26,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MWSCartService_Model_GetCartsResponse
+ * MWSCartService_Model_ListCartsByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetCartsResult: MWSCartService_Model_GetCartsResult</li>
+ * <li>ListCartsByNextTokenResult: MWSCartService_Model_ListCartsByNextTokenResult</li>
  * <li>ResponseMetadata: MWSCartService_Model_ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: MWSCartService_Model_ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MWSCartService_Model_GetCartsResponse extends MWSCartService_Model {
+ class MWSCartService_Model_ListCartsByNextTokenResponse extends MWSCartService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetCartsResult' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_GetCartsResult'),
+    'ListCartsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ListCartsByNextTokenResult'),
     'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseMetadata'),
     'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseHeaderMetadata'),
     );
@@ -50,48 +51,48 @@ require_once (dirname(__FILE__) . '/../Model.php');
     }
 
     /**
-     * Get the value of the GetCartsResult property.
+     * Get the value of the ListCartsByNextTokenResult property.
      *
-     * @return GetCartsResult GetCartsResult.
+     * @return ListCartsByNextTokenResult ListCartsByNextTokenResult.
      */
-    public function getGetCartsResult()
+    public function getListCartsByNextTokenResult()
     {
-        return $this->_fields['GetCartsResult']['FieldValue'];
+        return $this->_fields['ListCartsByNextTokenResult']['FieldValue'];
     }
 
     /**
-     * Set the value of the GetCartsResult property.
+     * Set the value of the ListCartsByNextTokenResult property.
      *
-     * @param MWSCartService_Model_GetCartsResult getCartsResult
+     * @param MWSCartService_Model_ListCartsByNextTokenResult listCartsByNextTokenResult
      * @return this instance
      */
-    public function setGetCartsResult($value)
+    public function setListCartsByNextTokenResult($value)
     {
-        $this->_fields['GetCartsResult']['FieldValue'] = $value;
+        $this->_fields['ListCartsByNextTokenResult']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Check to see if GetCartsResult is set.
+     * Check to see if ListCartsByNextTokenResult is set.
      *
-     * @return true if GetCartsResult is set.
+     * @return true if ListCartsByNextTokenResult is set.
      */
-    public function isSetGetCartsResult()
+    public function isSetListCartsByNextTokenResult()
     {
-                return !is_null($this->_fields['GetCartsResult']['FieldValue']);
+                return !is_null($this->_fields['ListCartsByNextTokenResult']['FieldValue']);
             }
 
     /**
-     * Set the value of GetCartsResult, return this.
+     * Set the value of ListCartsByNextTokenResult, return this.
      *
-     * @param getCartsResult
+     * @param listCartsByNextTokenResult
      *             The new value to set.
      *
      * @return This instance.
      */
-    public function withGetCartsResult($value)
+    public function withListCartsByNextTokenResult($value)
     {
-        $this->setGetCartsResult($value);
+        $this->setListCartsByNextTokenResult($value);
         return $this;
     }
 
@@ -187,24 +188,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MWSCartService_Model_GetCartsResponse from XML string
+     * Construct MWSCartService_Model_ListCartsByNextTokenResponse from XML string
      * 
      * @param $xml
      *        XML string to construct from
      *
-     * @return MWSCartService_Model_GetCartsResponse 
+     * @return MWSCartService_Model_ListCartsByNextTokenResponse 
      */
     public static function fromXML($xml)
     {
         $dom = new DOMDocument();
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
-        $response = $xpath->query("//*[local-name()='GetCartsResponse']");
+        $response = $xpath->query("//*[local-name()='ListCartsByNextTokenResponse']");
         if ($response->length == 1) {
-            return new MWSCartService_Model_GetCartsResponse(($response->item(0))); 
+            return new MWSCartService_Model_ListCartsByNextTokenResponse(($response->item(0))); 
         } else {
-            throw new Exception ("Unable to construct MWSCartService_Model_GetCartsResponse from provided XML. 
-                                  Make sure that GetCartsResponse is a root element");
+            throw new Exception ("Unable to construct MWSCartService_Model_ListCartsByNextTokenResponse from provided XML. 
+                                  Make sure that ListCartsByNextTokenResponse is a root element");
         }
     }
     /**
@@ -215,9 +216,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function toXML() 
     {
         $xml = "";
-        $xml .= "<GetCartsResponse xmlns=\"http://mws.amazonservices.com/schema/CartInformation/2014-03-01\">";
+        $xml .= "<ListCartsByNextTokenResponse xmlns=\"http://mws.amazonservices.com/schema/CartInformation/2014-03-01\">";
         $xml .= $this->_toXMLFragment();
-        $xml .= "</GetCartsResponse>";
+        $xml .= "</ListCartsByNextTokenResponse>";
         return $xml;
     }
 

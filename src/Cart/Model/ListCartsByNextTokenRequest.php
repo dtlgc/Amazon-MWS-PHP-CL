@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Cart\Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -25,24 +26,26 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MWSCartService_Model_GetServiceStatusRequest
+ * MWSCartService_Model_ListCartsByNextTokenRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
+ * <li>NextToken: string</li>
  *
  * </ul>
  */
 
- class MWSCartService_Model_GetServiceStatusRequest extends MWSCartService_Model {
+ class MWSCartService_Model_ListCartsByNextTokenRequest extends MWSCartService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
     }
@@ -136,6 +139,52 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function withMWSAuthToken($value)
     {
         $this->setMWSAuthToken($value);
+        return $this;
+    }
+
+    /**
+     * Get the value of the NextToken property.
+     *
+     * @return String NextToken.
+     */
+    public function getNextToken()
+    {
+        return $this->_fields['NextToken']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the NextToken property.
+     *
+     * @param string nextToken
+     * @return this instance
+     */
+    public function setNextToken($value)
+    {
+        $this->_fields['NextToken']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if NextToken is set.
+     *
+     * @return true if NextToken is set.
+     */
+    public function isSetNextToken()
+    {
+                return !is_null($this->_fields['NextToken']['FieldValue']);
+            }
+
+    /**
+     * Set the value of NextToken, return this.
+     *
+     * @param nextToken
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withNextToken($value)
+    {
+        $this->setNextToken($value);
         return $this;
     }
 
