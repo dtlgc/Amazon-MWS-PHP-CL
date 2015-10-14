@@ -1,6 +1,5 @@
 <?php
 namespace Amazon\MWS\Cart;
-
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -29,9 +28,8 @@ abstract class MWSCartService_Model
     protected $_fields = array ();
 
     /**
-     * Construct new model class
-     * 
-     * @param mixed $data - DOMElement or Associative Array to construct from. 
+     * @param null $data - DOMElement or Associative Array to construct from.
+     * @throws Exception
      */
     public function __construct($data = null)
     {

@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\FBAInbound;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -1243,7 +1244,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
             }
         } catch (FBAInboundServiceMWS_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
+        } catch (\Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
             throw new FBAInboundServiceMWS_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
@@ -1555,7 +1556,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -1598,7 +1599,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

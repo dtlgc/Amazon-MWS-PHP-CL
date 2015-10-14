@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\FBAInventory;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -438,7 +439,7 @@ class FBAInventoryServiceMWS_Client implements FBAInventoryServiceMWS_Interface
             }
         } catch (FBAInventoryServiceMWS_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
+        } catch (\Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
             throw new FBAInventoryServiceMWS_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }

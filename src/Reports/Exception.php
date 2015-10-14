@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Reports;
 /** 
  *  PHP Version 5
  *
@@ -22,7 +23,7 @@
  * returned by Marketplace Web Service  service
  *
  */
-class MarketplaceWebService_Exception extends Exception
+class MarketplaceWebService_Exception extends \Exception
 
 {
     /** @var string */

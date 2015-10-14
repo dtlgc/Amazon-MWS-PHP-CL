@@ -1,4 +1,6 @@
 <?php
+namespace Amazon\MWS\Webstore\Model;
+use Amazon\MWS\Webstore\MarketplaceWebServiceWebstore_Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 

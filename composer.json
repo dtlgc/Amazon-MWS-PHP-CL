@@ -13,5 +13,8 @@
     "psr-4": {
       "Amazon\\MWS\\Cart\\": "src/Cart"
     }
+  },
+  "require": {
+    "phpunit/phpunit": "5.2.x-dev"
   }
 }

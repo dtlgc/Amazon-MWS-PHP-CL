@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Cart;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -41,8 +42,8 @@ class MWSCartService_Mock implements MWSCartService_Interface
      */
     public function getCarts($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetCartsResponse.php');
-        return MWSCartService_Model_GetCartsResponse::fromXML($this->_invoke('GetCarts'));
+//        require_once (dirname(__FILE__) . '/Model/GetCartsResponse.php');
+        return Model\MWSCartService_Model_GetCartsResponse::fromXML($this->_invoke('GetCarts'));
     }
 
     /**
@@ -60,8 +61,8 @@ class MWSCartService_Mock implements MWSCartService_Interface
      */
     public function listCarts($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListCartsResponse.php');
-        return MWSCartService_Model_ListCartsResponse::fromXML($this->_invoke('ListCarts'));
+//        require_once (dirname(__FILE__) . '/Model/ListCartsResponse.php');
+        return Model\MWSCartService_Model_ListCartsResponse::fromXML($this->_invoke('ListCarts'));
     }
 
     /**
@@ -78,8 +79,8 @@ class MWSCartService_Mock implements MWSCartService_Interface
      */
     public function listCartsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenResponse.php');
-        return MWSCartService_Model_ListCartsByNextTokenResponse::fromXML($this->_invoke('ListCartsByNextToken'));
+//        require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenResponse.php');
+        return Model\MWSCartService_Model_ListCartsByNextTokenResponse::fromXML($this->_invoke('ListCartsByNextToken'));
     }
 
     /**
@@ -94,8 +95,8 @@ class MWSCartService_Mock implements MWSCartService_Interface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        return MWSCartService_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
+//        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+        return Model\MWSCartService_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
     // Private API ------------------------------------------------------------//

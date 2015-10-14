@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\FBAOutbound;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -23,7 +24,7 @@
  * returned by FBA Outbound Service MWS service
  *
  */
-class FBAOutboundServiceMWS_Exception extends Exception
+class FBAOutboundServiceMWS_Exception extends \Exception
 
 {
     /** @var string */

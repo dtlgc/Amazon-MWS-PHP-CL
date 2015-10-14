@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Feeds;
 /** 
  *  PHP Version 5
  *

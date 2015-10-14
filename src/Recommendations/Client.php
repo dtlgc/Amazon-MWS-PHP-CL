@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Recommendations;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -431,7 +432,7 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
             }
         } catch (MWSRecommendationsSectionService_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
+        } catch (\Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
             throw new MWSRecommendationsSectionService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }

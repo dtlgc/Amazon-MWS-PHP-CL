@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Feeds;
 /**
  *  PHP Version 5
  *
@@ -850,7 +851,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
           }
           
           /* Rethrow on deserializer error */
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
           require_once ('MarketplaceWebService/Exception.php');
             throw new MarketplaceWebService_Exception(array('Exception' => $e, 'Message' => $e->getMessage()));
         }
@@ -859,7 +860,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
 
     } catch (MarketplaceWebService_Exception $se) {
       throw $se;
-    } catch (Exception $t) {
+    } catch (\Exception $t) {
       throw new MarketplaceWebService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
     }
     return array('ResponseBody' => $response['ResponseBody'], 'ResponseHeaderMetadata' => $response['ResponseHeaderMetadata']);
@@ -1019,7 +1020,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
   	
   	// For unsuccessful responses, i.e. non-200 HTTP responses, we write the response body
   	// into a separate stream.
-  	$responseHandle;
+//  	$responseHandle;
   	if ($httpStatusCode == 200) {
   		$responseHandle = $this->responseBodyContents;
   	} else {

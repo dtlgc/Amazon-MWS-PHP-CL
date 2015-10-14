@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Webstore;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -23,7 +24,7 @@
  * returned by Marketplace Web Service Webstore service
  *
  */
-class MarketplaceWebServiceWebstore_Exception extends Exception
+class MarketplaceWebServiceWebstore_Exception extends \Exception
 
 {
     /** @var string */

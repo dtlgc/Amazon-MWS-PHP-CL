@@ -760,7 +760,7 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
             }
         } catch (MWSSubscriptionsService_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
+        } catch (\Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
             throw new MWSSubscriptionsService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
