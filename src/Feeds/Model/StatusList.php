@@ -1,4 +1,6 @@
 <?php
+namespace Amazon\MWS\Feeds\Model;
+use Amazon\MWS\Feeds\MarketplaceWebService_Model;
 /** 
  *  PHP Version 5
  *

@@ -1,4 +1,6 @@
 <?php
+namespace Amazon\MWS\Reports\Model;
+use Amazon\MWS\Reports\MarketplaceWebService_Model;
 /** 
  *  PHP Version 5
  *

@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Customer;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -500,7 +501,7 @@ class MWSCustomerService_Client implements MWSCustomerService_Interface
             }
         } catch (MWSCustomerService_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
+        } catch (\Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
             throw new MWSCustomerService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }

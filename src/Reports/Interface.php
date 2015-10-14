@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Reports;
 /** 
  *  PHP Version 5
  *

@@ -1,4 +1,5 @@
 <?php
+namespace Amazon\MWS\Sellers;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -378,7 +379,7 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
             }
         } catch (MarketplaceWebServiceSellers_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
+        } catch (\Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
             throw new MarketplaceWebServiceSellers_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }

@@ -1,4 +1,7 @@
 <?php
+
+namespace Amazon\MWS\Cart;
+
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -20,7 +23,7 @@
 /**
  *  @see MWSCartService_Interface
  */
-require_once (dirname(__FILE__) . '/Interface.php');
+//require_once (dirname(__FILE__) . '/Interface.php');
 
 /**
  * MWSCartService_Client is an implementation of MWSCartService
@@ -68,14 +71,14 @@ class MWSCartService_Client implements MWSCartService_Interface
     public function getCarts($request)
     {
         if (!($request instanceof MWSCartService_Model_GetCartsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetCartsRequest.php');
+//            require_once (dirname(__FILE__) . '/Model/GetCartsRequest.php');
             $request = new MWSCartService_Model_GetCartsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCarts';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetCartsResponse.php');
+//        require_once (dirname(__FILE__) . '/Model/GetCartsResponse.php');
         $response = MWSCartService_Model_GetCartsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -84,6 +87,9 @@ class MWSCartService_Client implements MWSCartService_Interface
 
     /**
      * Convert GetCartsRequest to name value pairs
+     *
+     * @param $request
+     * @return array
      */
     private function _convertGetCarts($request) {
 
@@ -122,14 +128,14 @@ class MWSCartService_Client implements MWSCartService_Interface
     public function listCarts($request)
     {
         if (!($request instanceof MWSCartService_Model_ListCartsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListCartsRequest.php');
+//            require_once (dirname(__FILE__) . '/Model/ListCartsRequest.php');
             $request = new MWSCartService_Model_ListCartsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListCarts';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListCartsResponse.php');
+//        require_once (dirname(__FILE__) . '/Model/ListCartsResponse.php');
         $response = MWSCartService_Model_ListCartsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -138,6 +144,9 @@ class MWSCartService_Client implements MWSCartService_Interface
 
     /**
      * Convert ListCartsRequest to name value pairs
+     *
+     * @param $request
+     * @return array
      */
     private function _convertListCarts($request) {
 
@@ -178,14 +187,14 @@ class MWSCartService_Client implements MWSCartService_Interface
     public function listCartsByNextToken($request)
     {
         if (!($request instanceof MWSCartService_Model_ListCartsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenRequest.php');
+//            require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenRequest.php');
             $request = new MWSCartService_Model_ListCartsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListCartsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenResponse.php');
+//        require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenResponse.php');
         $response = MWSCartService_Model_ListCartsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -194,6 +203,9 @@ class MWSCartService_Client implements MWSCartService_Interface
 
     /**
      * Convert ListCartsByNextTokenRequest to name value pairs
+     *
+     * @param $request
+     * @return array
      */
     private function _convertListCartsByNextToken($request) {
 
@@ -226,14 +238,14 @@ class MWSCartService_Client implements MWSCartService_Interface
     public function getServiceStatus($request)
     {
         if (!($request instanceof MWSCartService_Model_GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
+//            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MWSCartService_Model_GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+//        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = MWSCartService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -242,6 +254,9 @@ class MWSCartService_Client implements MWSCartService_Interface
 
     /**
      * Convert GetServiceStatusRequest to name value pairs
+     *
+     * @param $request
+     * @return array
      */
     private function _convertGetServiceStatus($request) {
 
@@ -412,14 +427,11 @@ class MWSCartService_Client implements MWSCartService_Interface
 
     // Private API ------------------------------------------------------------//
 
-    /**
-     * Invoke request and return response
-     */
     private function _invoke(array $parameters)
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
+//                require_once (dirname(__FILE__) . '/Exception.php');
                 throw new MWSCartService_Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
@@ -441,14 +453,20 @@ class MWSCartService_Client implements MWSCartService_Interface
             }
         } catch (MWSCartService_Exception $se) {
             throw $se;
-        } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+        } catch (\Exception $t) {
+//            require_once (dirname(__FILE__) . '/Exception.php');
             throw new MWSCartService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
     /**
      * Look for additional error strings in the response and return formatted exception
+     *
+     * @param $responseBody
+     * @param $status
+     * @param $responseHeaderMetadata
+     * @param Exception|null $e
+     * @return MWSCartService_Exception
      */
     private function _reportAnyErrors($responseBody, $status, $responseHeaderMetadata, Exception $e =  null)
     {
@@ -469,7 +487,7 @@ class MWSCartService_Client implements MWSCartService_Interface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
+//        require_once (dirname(__FILE__) . '/Exception.php');
         return new MWSCartService_Exception($exProps);
     }
 
@@ -534,7 +552,7 @@ class MWSCartService_Client implements MWSCartService_Interface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+//            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -586,7 +604,7 @@ class MWSCartService_Client implements MWSCartService_Interface
         
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
+//            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new MWSCartService_Exception($exProps);
@@ -650,7 +668,7 @@ class MWSCartService_Client implements MWSCartService_Interface
             }
         }
  
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
+//        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new MWSCartService_Model_ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

@@ -1,4 +1,7 @@
 <?php
+namespace Amazon\MWS\FBAInbound\Model;
+use Amazon\MWS\FBAInbound\MWSFBAInboundService_Model;
+use Amazon\MWS\FBAOutbound\FBAOutboundServiceMWS_Model;
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
@@ -21,6 +24,7 @@
  *  @see FBAInboundServiceMWS_Model
  */
 
+
 require_once (dirname(__FILE__) . '/../Model.php');
 
 
@@ -35,7 +39,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_InvalidSKUList extends FBAInboundServiceMWS_Model {
+ class FBAInboundServiceMWS_Model_InvalidSKUList extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
