@@ -21,7 +21,7 @@
  * List All Fulfillment Orders Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of FBAOutboundServiceMWS
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for List All Fulfillment Orders Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as FBAOutboundServiceMWS_Model_ListAllFulfillmentOrders
- $request = new FBAOutboundServiceMWS_Model_ListAllFulfillmentOrdersRequest();
+ // @TODO: set request. Action can be passed as MwsFbaOutboundServiceModel_ListAllFulfillmentOrders
+ $request = new MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListAllFulfillmentOrders($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param FBAOutboundServiceMWS_Interface $service instance of FBAOutboundServiceMWS_Interface
-  * @param mixed $request FBAOutboundServiceMWS_Model_ListAllFulfillmentOrders or array of parameters
+  * @param mixed $request MwsFbaOutboundServiceModel_ListAllFulfillmentOrders or array of parameters
   */
 
   function invokeListAllFulfillmentOrders(FBAOutboundServiceMWS_Interface $service, $request)

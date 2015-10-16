@@ -21,7 +21,7 @@
  * Register Destination Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MWSSubscriptionsService
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Register Destination Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSSubscriptionsService_Model_RegisterDestination
- $request = new MWSSubscriptionsService_Model_RegisterDestinationInput();
+ // @TODO: set request. Action can be passed as MWSSubscriptions_Model_RegisterDestination
+ $request = new MWSSubscriptions_Model_RegisterDestinationInput();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeRegisterDestination($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MWSSubscriptionsService_Interface $service instance of MWSSubscriptionsService_Interface
-  * @param mixed $request MWSSubscriptionsService_Model_RegisterDestination or array of parameters
+  * @param mixed $request MWSSubscriptions_Model_RegisterDestination or array of parameters
   */
 
   function invokeRegisterDestination(MWSSubscriptionsService_Interface $service, $request)

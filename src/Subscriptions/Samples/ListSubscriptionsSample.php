@@ -21,7 +21,7 @@
  * List Subscriptions Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MWSSubscriptionsService
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for List Subscriptions Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSSubscriptionsService_Model_ListSubscriptions
- $request = new MWSSubscriptionsService_Model_ListSubscriptionsInput();
+ // @TODO: set request. Action can be passed as MWSSubscriptions_Model_ListSubscriptions
+ $request = new MWSSubscriptions_Model_ListSubscriptionsInput();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListSubscriptions($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MWSSubscriptionsService_Interface $service instance of MWSSubscriptionsService_Interface
-  * @param mixed $request MWSSubscriptionsService_Model_ListSubscriptions or array of parameters
+  * @param mixed $request MWSSubscriptions_Model_ListSubscriptions or array of parameters
   */
 
   function invokeListSubscriptions(MWSSubscriptionsService_Interface $service, $request)

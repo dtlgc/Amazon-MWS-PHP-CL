@@ -21,7 +21,7 @@
  * List Recommendations Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MWSRecommendationsSectionService
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for List Recommendations Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSRecommendationsSectionService_Model_ListRecommendations
- $request = new MWSRecommendationsSectionService_Model_ListRecommendationsRequest();
+ // @TODO: set request. Action can be passed as MWSRecommendations_Model_ListRecommendations
+ $request = new MWSRecommendations_Model_ListRecommendationsRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListRecommendations($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MWSRecommendationsSectionService_Interface $service instance of MWSRecommendationsSectionService_Interface
-  * @param mixed $request MWSRecommendationsSectionService_Model_ListRecommendations or array of parameters
+  * @param mixed $request MWSRecommendations_Model_ListRecommendations or array of parameters
   */
 
   function invokeListRecommendations(MWSRecommendationsSectionService_Interface $service, $request)

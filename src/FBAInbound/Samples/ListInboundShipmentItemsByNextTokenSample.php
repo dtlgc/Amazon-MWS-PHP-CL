@@ -21,7 +21,7 @@
  * List Inbound Shipment Items By Next Token Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of FBAInboundServiceMWS

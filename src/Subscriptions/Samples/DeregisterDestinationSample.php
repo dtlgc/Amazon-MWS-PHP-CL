@@ -21,7 +21,7 @@
  * Deregister Destination Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MWSSubscriptionsService
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Deregister Destination Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSSubscriptionsService_Model_DeregisterDestination
- $request = new MWSSubscriptionsService_Model_DeregisterDestinationInput();
+ // @TODO: set request. Action can be passed as MWSSubscriptions_Model_DeregisterDestination
+ $request = new MWSSubscriptions_Model_DeregisterDestinationInput();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeDeregisterDestination($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MWSSubscriptionsService_Interface $service instance of MWSSubscriptionsService_Interface
-  * @param mixed $request MWSSubscriptionsService_Model_DeregisterDestination or array of parameters
+  * @param mixed $request MWSSubscriptions_Model_DeregisterDestination or array of parameters
   */
 
   function invokeDeregisterDestination(MWSSubscriptionsService_Interface $service, $request)

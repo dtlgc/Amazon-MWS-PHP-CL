@@ -21,7 +21,7 @@
  * Get Customers For Customer Id Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MWSCustomerService

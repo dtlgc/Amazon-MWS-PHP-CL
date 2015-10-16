@@ -21,7 +21,7 @@
  * Cancel Fulfillment Order Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of FBAOutboundServiceMWS
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Cancel Fulfillment Order Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as FBAOutboundServiceMWS_Model_CancelFulfillmentOrder
- $request = new FBAOutboundServiceMWS_Model_CancelFulfillmentOrderRequest();
+ // @TODO: set request. Action can be passed as MwsFbaOutboundServiceModel_CancelFulfillmentOrder
+ $request = new MwsFbaOutboundServiceModel_CancelFulfillmentOrderRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeCancelFulfillmentOrder($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param FBAOutboundServiceMWS_Interface $service instance of FBAOutboundServiceMWS_Interface
-  * @param mixed $request FBAOutboundServiceMWS_Model_CancelFulfillmentOrder or array of parameters
+  * @param mixed $request MwsFbaOutboundServiceModel_CancelFulfillmentOrder or array of parameters
   */
 
   function invokeCancelFulfillmentOrder(FBAOutboundServiceMWS_Interface $service, $request)

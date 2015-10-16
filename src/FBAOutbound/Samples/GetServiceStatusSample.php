@@ -21,7 +21,7 @@
  * Get Service Status Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of FBAOutboundServiceMWS
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Get Service Status Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as FBAOutboundServiceMWS_Model_GetServiceStatus
- $request = new FBAOutboundServiceMWS_Model_GetServiceStatusRequest();
+ // @TODO: set request. Action can be passed as MwsFbaOutboundServiceModel_GetServiceStatus
+ $request = new MwsFbaOutboundServiceModel_GetServiceStatusRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetServiceStatus($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param FBAOutboundServiceMWS_Interface $service instance of FBAOutboundServiceMWS_Interface
-  * @param mixed $request FBAOutboundServiceMWS_Model_GetServiceStatus or array of parameters
+  * @param mixed $request MwsFbaOutboundServiceModel_GetServiceStatus or array of parameters
   */
 
   function invokeGetServiceStatus(FBAOutboundServiceMWS_Interface $service, $request)

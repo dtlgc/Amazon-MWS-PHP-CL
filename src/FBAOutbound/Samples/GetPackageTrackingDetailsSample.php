@@ -21,7 +21,7 @@
  * Get Package Tracking Details Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of FBAOutboundServiceMWS
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Get Package Tracking Details Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as FBAOutboundServiceMWS_Model_GetPackageTrackingDetails
- $request = new FBAOutboundServiceMWS_Model_GetPackageTrackingDetailsRequest();
+ // @TODO: set request. Action can be passed as MwsFbaOutboundServiceModel_GetPackageTrackingDetails
+ $request = new MwsFbaOutboundServiceModel_GetPackageTrackingDetailsRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetPackageTrackingDetails($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param FBAOutboundServiceMWS_Interface $service instance of FBAOutboundServiceMWS_Interface
-  * @param mixed $request FBAOutboundServiceMWS_Model_GetPackageTrackingDetails or array of parameters
+  * @param mixed $request MwsFbaOutboundServiceModel_GetPackageTrackingDetails or array of parameters
   */
 
   function invokeGetPackageTrackingDetails(FBAOutboundServiceMWS_Interface $service, $request)

@@ -21,7 +21,7 @@
  * Get Order Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceOrders
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Get Order Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebServiceOrders_Model_GetOrder
- $request = new MarketplaceWebServiceOrders_Model_GetOrderRequest();
+ // @TODO: set request. Action can be passed as Orders_Model_GetOrder
+ $request = new Orders_Model_GetOrderRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetOrder($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MarketplaceWebServiceOrders_Interface $service instance of MarketplaceWebServiceOrders_Interface
-  * @param mixed $request MarketplaceWebServiceOrders_Model_GetOrder or array of parameters
+  * @param mixed $request Orders_Model_GetOrder or array of parameters
   */
 
   function invokeGetOrder(MarketplaceWebServiceOrders_Interface $service, $request)

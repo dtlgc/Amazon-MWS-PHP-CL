@@ -21,7 +21,7 @@
  * List Recommendations By Next Token Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MWSRecommendationsSectionService
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for List Recommendations By Next Token Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSRecommendationsSectionService_Model_ListRecommendationsByNextToken
- $request = new MWSRecommendationsSectionService_Model_ListRecommendationsByNextTokenRequest();
+ // @TODO: set request. Action can be passed as MWSRecommendations_Model_ListRecommendationsByNextToken
+ $request = new MWSRecommendations_Model_ListRecommendationsByNextTokenRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListRecommendationsByNextToken($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MWSRecommendationsSectionService_Interface $service instance of MWSRecommendationsSectionService_Interface
-  * @param mixed $request MWSRecommendationsSectionService_Model_ListRecommendationsByNextToken or array of parameters
+  * @param mixed $request MWSRecommendations_Model_ListRecommendationsByNextToken or array of parameters
   */
 
   function invokeListRecommendationsByNextToken(MWSRecommendationsSectionService_Interface $service, $request)

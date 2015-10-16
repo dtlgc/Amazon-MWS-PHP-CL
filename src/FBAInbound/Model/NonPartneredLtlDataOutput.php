@@ -23,7 +23,7 @@ use Amazon\MWS\FBAInbound\MWSFBAInboundService_Model;
  *  @see FBAInboundServiceMWS_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+//require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**

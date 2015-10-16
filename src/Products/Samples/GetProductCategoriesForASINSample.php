@@ -21,7 +21,7 @@
  * Get Product Categories For ASIN Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceProducts

@@ -21,7 +21,7 @@
  * Get Subscription Details Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceWebstore

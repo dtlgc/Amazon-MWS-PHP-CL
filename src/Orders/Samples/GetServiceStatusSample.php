@@ -21,7 +21,7 @@
  * Get Service Status Sample
  */
 
-require_once('.config.inc.php');
+//require_once('.config.inc.php');
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceOrders
@@ -73,8 +73,8 @@ require_once('.config.inc.php');
  * Setup request parameters and uncomment invoke to try out
  * sample for Get Service Status Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebServiceOrders_Model_GetServiceStatus
- $request = new MarketplaceWebServiceOrders_Model_GetServiceStatusRequest();
+ // @TODO: set request. Action can be passed as Orders_Model_GetServiceStatus
+ $request = new Orders_Model_GetServiceStatusRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetServiceStatus($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MarketplaceWebServiceOrders_Interface $service instance of MarketplaceWebServiceOrders_Interface
-  * @param mixed $request MarketplaceWebServiceOrders_Model_GetServiceStatus or array of parameters
+  * @param mixed $request Orders_Model_GetServiceStatus or array of parameters
   */
 
   function invokeGetServiceStatus(MarketplaceWebServiceOrders_Interface $service, $request)
