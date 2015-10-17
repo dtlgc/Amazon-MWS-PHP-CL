@@ -216,14 +216,14 @@ use Amazon\MWS\Products\Products_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetMyPriceForASINResponse']");
         if ($response->length == 1) {
             return new Products_Model_GetMyPriceForASINResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse from provided XML. 
+            throw new \Exception ("Unable to construct MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse from provided XML.
                                   Make sure that GetMyPriceForASINResponse is a root element");
         }
     }

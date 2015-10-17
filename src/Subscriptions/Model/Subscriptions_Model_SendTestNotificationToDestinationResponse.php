@@ -198,14 +198,14 @@ use Amazon\MWS\Subscriptions\Subscriptions_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='SendTestNotificationToDestinationResponse']");
         if ($response->length == 1) {
             return new Subscriptions_Model_SendTestNotificationToDestinationResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSSubscriptions_Model_SendTestNotificationToDestinationResponse from provided XML.
+            throw new \Exception ("Unable to construct MWSSubscriptions_Model_SendTestNotificationToDestinationResponse from provided XML.
                                   Make sure that SendTestNotificationToDestinationResponse is a root element");
         }
     }

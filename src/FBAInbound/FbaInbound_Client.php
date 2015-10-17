@@ -67,7 +67,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function confirmTransportRequest($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_ConfirmTransportInputRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_ConfirmTransportInputRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ConfirmTransportInputRequest.php');
             $request = new FBAInboundServiceMWS_Model_ConfirmTransportInputRequest($request);
         }
@@ -76,7 +76,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ConfirmTransportRequestResponse.php');
-        $response = FBAInboundServiceMWS_Model_ConfirmTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_ConfirmTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -119,7 +119,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function createInboundShipment($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_CreateInboundShipmentRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_CreateInboundShipmentRequest)) {
             //require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentRequest.php');
             $request = new FBAInboundServiceMWS_Model_CreateInboundShipmentRequest($request);
         }
@@ -128,7 +128,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentResponse.php');
-        $response = FBAInboundServiceMWS_Model_CreateInboundShipmentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_CreateInboundShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -186,7 +186,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function createInboundShipmentPlan($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_CreateInboundShipmentPlanRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_CreateInboundShipmentPlanRequest)) {
             //require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentPlanRequest.php');
             $request = new FBAInboundServiceMWS_Model_CreateInboundShipmentPlanRequest($request);
         }
@@ -195,7 +195,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentPlanResponse.php');
-        $response = FBAInboundServiceMWS_Model_CreateInboundShipmentPlanResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_CreateInboundShipmentPlanResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -254,7 +254,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function estimateTransportRequest($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_EstimateTransportInputRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_EstimateTransportInputRequest)) {
             //require_once (dirname(__FILE__) . '/Model/EstimateTransportInputRequest.php');
             $request = new FBAInboundServiceMWS_Model_EstimateTransportInputRequest($request);
         }
@@ -263,7 +263,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/EstimateTransportRequestResponse.php');
-        $response = FBAInboundServiceMWS_Model_EstimateTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_EstimateTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -304,7 +304,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function getBillOfLading($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_GetBillOfLadingRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_GetBillOfLadingRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetBillOfLadingRequest.php');
             $request = new FBAInboundServiceMWS_Model_GetBillOfLadingRequest($request);
         }
@@ -313,7 +313,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetBillOfLadingResponse.php');
-        $response = FBAInboundServiceMWS_Model_GetBillOfLadingResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_GetBillOfLadingResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -366,7 +366,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function getPackageLabels($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_GetPackageLabelsRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_GetPackageLabelsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetPackageLabelsRequest.php');
             $request = new FBAInboundServiceMWS_Model_GetPackageLabelsRequest($request);
         }
@@ -375,7 +375,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetPackageLabelsResponse.php');
-        $response = FBAInboundServiceMWS_Model_GetPackageLabelsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_GetPackageLabelsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -424,7 +424,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function getPrepInstructionsForASIN($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_GetPrepInstructionsForASINRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_GetPrepInstructionsForASINRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForASINRequest.php');
             $request = new FBAInboundServiceMWS_Model_GetPrepInstructionsForASINRequest($request);
         }
@@ -433,7 +433,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForASINResponse.php');
-        $response = FBAInboundServiceMWS_Model_GetPrepInstructionsForASINResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_GetPrepInstructionsForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -482,7 +482,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function getPrepInstructionsForSKU($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_GetPrepInstructionsForSKURequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_GetPrepInstructionsForSKURequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForSKURequest.php');
             $request = new FBAInboundServiceMWS_Model_GetPrepInstructionsForSKURequest($request);
         }
@@ -491,7 +491,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForSKUResponse.php');
-        $response = FBAInboundServiceMWS_Model_GetPrepInstructionsForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_GetPrepInstructionsForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -539,7 +539,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new FBAInboundServiceMWS_Model_GetServiceStatusRequest($request);
         }
@@ -548,7 +548,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = FBAInboundServiceMWS_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -589,7 +589,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function getTransportContent($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_GetTransportContentRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_GetTransportContentRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetTransportContentRequest.php');
             $request = new FBAInboundServiceMWS_Model_GetTransportContentRequest($request);
         }
@@ -598,7 +598,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetTransportContentResponse.php');
-        $response = FBAInboundServiceMWS_Model_GetTransportContentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_GetTransportContentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -647,7 +647,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function listInboundShipmentItems($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_ListInboundShipmentItemsRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_ListInboundShipmentItemsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsRequest.php');
             $request = new FBAInboundServiceMWS_Model_ListInboundShipmentItemsRequest($request);
         }
@@ -656,7 +656,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsResponse.php');
-        $response = FBAInboundServiceMWS_Model_ListInboundShipmentItemsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_ListInboundShipmentItemsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -707,7 +707,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function listInboundShipmentItemsByNextToken($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_ListInboundShipmentItemsByNextTokenRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_ListInboundShipmentItemsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenRequest.php');
             $request = new FBAInboundServiceMWS_Model_ListInboundShipmentItemsByNextTokenRequest($request);
         }
@@ -716,7 +716,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenResponse.php');
-        $response = FBAInboundServiceMWS_Model_ListInboundShipmentItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_ListInboundShipmentItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -766,7 +766,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function listInboundShipments($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_ListInboundShipmentsRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_ListInboundShipmentsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsRequest.php');
             $request = new FBAInboundServiceMWS_Model_ListInboundShipmentsRequest($request);
         }
@@ -775,7 +775,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsResponse.php');
-        $response = FBAInboundServiceMWS_Model_ListInboundShipmentsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_ListInboundShipmentsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -834,7 +834,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function listInboundShipmentsByNextToken($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_ListInboundShipmentsByNextTokenRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_ListInboundShipmentsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenRequest.php');
             $request = new FBAInboundServiceMWS_Model_ListInboundShipmentsByNextTokenRequest($request);
         }
@@ -843,7 +843,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenResponse.php');
-        $response = FBAInboundServiceMWS_Model_ListInboundShipmentsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_ListInboundShipmentsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -886,7 +886,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function putTransportContent($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_PutTransportContentRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_PutTransportContentRequest)) {
             //require_once (dirname(__FILE__) . '/Model/PutTransportContentRequest.php');
             $request = new FBAInboundServiceMWS_Model_PutTransportContentRequest($request);
         }
@@ -895,7 +895,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/PutTransportContentResponse.php');
-        $response = FBAInboundServiceMWS_Model_PutTransportContentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_PutTransportContentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -957,7 +957,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function updateInboundShipment($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_UpdateInboundShipmentRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_UpdateInboundShipmentRequest)) {
             //require_once (dirname(__FILE__) . '/Model/UpdateInboundShipmentRequest.php');
             $request = new FBAInboundServiceMWS_Model_UpdateInboundShipmentRequest($request);
         }
@@ -966,7 +966,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/UpdateInboundShipmentResponse.php');
-        $response = FBAInboundServiceMWS_Model_UpdateInboundShipmentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_UpdateInboundShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -1025,7 +1025,7 @@ class FbaInbound_Client implements FbaInbound_Interface
      */
     public function voidTransportRequest($request)
     {
-        if (!($request instanceof FBAInboundServiceMWS_Model_VoidTransportInputRequest)) {
+        if (!($request instanceof Model\FBAInboundServiceMWS_Model_VoidTransportInputRequest)) {
             //require_once (dirname(__FILE__) . '/Model/VoidTransportInputRequest.php');
             $request = new FBAInboundServiceMWS_Model_VoidTransportInputRequest($request);
         }
@@ -1034,7 +1034,7 @@ class FbaInbound_Client implements FbaInbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/VoidTransportRequestResponse.php');
-        $response = FBAInboundServiceMWS_Model_VoidTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FBAInboundServiceMWS_Model_VoidTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }

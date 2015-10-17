@@ -65,16 +65,16 @@ class Orders_Client implements Orders_Interface
      */
     public function getOrder($request)
     {
-        if (!($request instanceof Orders_Model_GetOrderRequest)) {
+        if (!($request instanceof Model\Orders_Model_GetOrderRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetOrderRequest.php');
-            $request = new Orders_Model_GetOrderRequest($request);
+            $request = new \Amazon\MWS\Orders\Model\Orders_Model_GetOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetOrder';
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetOrderResponse.php');
-        $response = Orders_Model_GetOrderResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Orders_Model_GetOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -114,16 +114,16 @@ class Orders_Client implements Orders_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof Orders_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\Orders_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new Orders_Model_GetServiceStatusRequest($request);
+            $request = new \Amazon\MWS\Orders\Model\Orders_Model_GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = Orders_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Orders_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -160,16 +160,16 @@ class Orders_Client implements Orders_Interface
      */
     public function listOrderItems($request)
     {
-        if (!($request instanceof Orders_Model_ListOrderItemsRequest)) {
+        if (!($request instanceof Model\Orders_Model_ListOrderItemsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListOrderItemsRequest.php');
-            $request = new Orders_Model_ListOrderItemsRequest($request);
+            $request = new \Amazon\MWS\Orders\Model\Orders_Model_ListOrderItemsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItems';
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListOrderItemsResponse.php');
-        $response = Orders_Model_ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Orders_Model_ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -210,16 +210,16 @@ class Orders_Client implements Orders_Interface
      */
     public function listOrderItemsByNextToken($request)
     {
-        if (!($request instanceof Orders_Model_ListOrderItemsByNextTokenRequest)) {
+        if (!($request instanceof Model\Orders_Model_ListOrderItemsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenRequest.php');
-            $request = new Orders_Model_ListOrderItemsByNextTokenRequest($request);
+            $request = new \Amazon\MWS\Orders\Model\Orders_Model_ListOrderItemsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItemsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenResponse.php');
-        $response = Orders_Model_ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Orders_Model_ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -258,16 +258,16 @@ class Orders_Client implements Orders_Interface
      */
     public function listOrders($request)
     {
-        if (!($request instanceof Orders_Model_ListOrdersRequest)) {
+        if (!($request instanceof Model\Orders_Model_ListOrdersRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListOrdersRequest.php');
-            $request = new Orders_Model_ListOrdersRequest($request);
+            $request = new \Amazon\MWS\Orders\Model\Orders_Model_ListOrdersRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrders';
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListOrdersResponse.php');
-        $response = Orders_Model_ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Orders_Model_ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -341,16 +341,16 @@ class Orders_Client implements Orders_Interface
      */
     public function listOrdersByNextToken($request)
     {
-        if (!($request instanceof Orders_Model_ListOrdersByNextTokenRequest)) {
+        if (!($request instanceof Model\Orders_Model_ListOrdersByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenRequest.php');
-            $request = new Orders_Model_ListOrdersByNextTokenRequest($request);
+            $request = new \Amazon\MWS\Orders\Model\Orders_Model_ListOrdersByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrdersByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenResponse.php');
-        $response = Orders_Model_ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Orders_Model_ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -770,7 +770,7 @@ class Orders_Client implements Orders_Interface
         }
  
         //require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new Orders_Model_ResponseHeaderMetadata(
+        return new \Amazon\MWS\Orders\Model\Orders_Model_ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],
@@ -872,7 +872,7 @@ class Orders_Client implements Orders_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -915,7 +915,7 @@ class Orders_Client implements Orders_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

@@ -68,7 +68,7 @@ class Customer_Client implements Customer_Interface
      */
     public function getCustomersByCustomerId($request)
     {
-        if (!($request instanceof MWSCustomerService_Model_GetCustomersByCustomerIdRequest)) {
+        if (!($request instanceof Model\MWSCustomerService_Model_GetCustomersByCustomerIdRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetCustomersByCustomerIdRequest.php');
             $request = new MWSCustomerService_Model_GetCustomersByCustomerIdRequest($request);
         }
@@ -77,7 +77,7 @@ class Customer_Client implements Customer_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetCustomersByCustomerIdResponse.php');
-        $response = MWSCustomerService_Model_GetCustomersByCustomerIdResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSCustomerService_Model_GetCustomersByCustomerIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -122,7 +122,7 @@ class Customer_Client implements Customer_Interface
      */
     public function getCustomersForCustomerId($request)
     {
-        if (!($request instanceof MWSCustomerService_Model_GetCustomersForCustomerIdRequest)) {
+        if (!($request instanceof Model\MWSCustomerService_Model_GetCustomersForCustomerIdRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetCustomersForCustomerIdRequest.php');
             $request = new MWSCustomerService_Model_GetCustomersForCustomerIdRequest($request);
         }
@@ -131,7 +131,7 @@ class Customer_Client implements Customer_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetCustomersForCustomerIdResponse.php');
-        $response = MWSCustomerService_Model_GetCustomersForCustomerIdResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSCustomerService_Model_GetCustomersForCustomerIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -177,7 +177,7 @@ class Customer_Client implements Customer_Interface
      */
     public function listCustomers($request)
     {
-        if (!($request instanceof MWSCustomerService_Model_ListCustomersRequest)) {
+        if (!($request instanceof Model\MWSCustomerService_Model_ListCustomersRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListCustomersRequest.php');
             $request = new MWSCustomerService_Model_ListCustomersRequest($request);
         }
@@ -186,7 +186,7 @@ class Customer_Client implements Customer_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListCustomersResponse.php');
-        $response = MWSCustomerService_Model_ListCustomersResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSCustomerService_Model_ListCustomersResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -237,7 +237,7 @@ class Customer_Client implements Customer_Interface
      */
     public function listCustomersByNextToken($request)
     {
-        if (!($request instanceof MWSCustomerService_Model_ListCustomersByNextTokenRequest)) {
+        if (!($request instanceof Model\MWSCustomerService_Model_ListCustomersByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListCustomersByNextTokenRequest.php');
             $request = new MWSCustomerService_Model_ListCustomersByNextTokenRequest($request);
         }
@@ -246,7 +246,7 @@ class Customer_Client implements Customer_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListCustomersByNextTokenResponse.php');
-        $response = MWSCustomerService_Model_ListCustomersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSCustomerService_Model_ListCustomersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -285,7 +285,7 @@ class Customer_Client implements Customer_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSCustomerService_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MWSCustomerService_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MWSCustomerService_Model_GetServiceStatusRequest($request);
         }
@@ -294,7 +294,7 @@ class Customer_Client implements Customer_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSCustomerService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSCustomerService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -813,7 +813,7 @@ class Customer_Client implements Customer_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -856,7 +856,7 @@ class Customer_Client implements Customer_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

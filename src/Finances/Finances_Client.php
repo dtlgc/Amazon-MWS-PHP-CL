@@ -65,7 +65,7 @@ class Finances_Client implements Finances_Interface
      */
     public function listFinancialEventGroups($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventGroupsRequest)) {
+        if (!($request instanceof Model\MWSFinancesService_Model_ListFinancialEventGroupsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsRequest.php');
             $request = new MWSFinancesService_Model_ListFinancialEventGroupsRequest($request);
         }
@@ -74,7 +74,7 @@ class Finances_Client implements Finances_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventGroupsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSFinancesService_Model_ListFinancialEventGroupsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -121,7 +121,7 @@ class Finances_Client implements Finances_Interface
      */
     public function listFinancialEventGroupsByNextToken($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenRequest)) {
+        if (!($request instanceof Model\MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenRequest.php');
             $request = new MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenRequest($request);
         }
@@ -130,7 +130,7 @@ class Finances_Client implements Finances_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -169,7 +169,7 @@ class Finances_Client implements Finances_Interface
      */
     public function listFinancialEvents($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventsRequest)) {
+        if (!($request instanceof Model\MWSFinancesService_Model_ListFinancialEventsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListFinancialEventsRequest.php');
             $request = new MWSFinancesService_Model_ListFinancialEventsRequest($request);
         }
@@ -178,7 +178,7 @@ class Finances_Client implements Finances_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListFinancialEventsResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSFinancesService_Model_ListFinancialEventsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -231,7 +231,7 @@ class Finances_Client implements Finances_Interface
      */
     public function listFinancialEventsByNextToken($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventsByNextTokenRequest)) {
+        if (!($request instanceof Model\MWSFinancesService_Model_ListFinancialEventsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenRequest.php');
             $request = new MWSFinancesService_Model_ListFinancialEventsByNextTokenRequest($request);
         }
@@ -240,7 +240,7 @@ class Finances_Client implements Finances_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSFinancesService_Model_ListFinancialEventsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -279,7 +279,7 @@ class Finances_Client implements Finances_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MWSFinancesService_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MWSFinancesService_Model_GetServiceStatusRequest($request);
         }
@@ -288,7 +288,7 @@ class Finances_Client implements Finances_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSFinancesService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSFinancesService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -807,7 +807,7 @@ class Finances_Client implements Finances_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -850,7 +850,7 @@ class Finances_Client implements Finances_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

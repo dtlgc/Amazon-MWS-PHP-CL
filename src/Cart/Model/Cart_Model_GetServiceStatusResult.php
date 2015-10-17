@@ -27,7 +27,7 @@ use Amazon\MWS\Cart\Cart_Model;
 
 
 /**
- * MWSCartService_Model_GetServiceStatusResult
+ * Cart_Model_GetServiceStatusResult
  * 
  * Properties:
  * <ul>

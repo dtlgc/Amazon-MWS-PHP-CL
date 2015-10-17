@@ -198,14 +198,14 @@ use Amazon\MWS\FBAInbound\MWSFBAInboundService_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ConfirmTransportRequestResponse']");
         if ($response->length == 1) {
             return new FbaInbound_Model_ConfirmTransportRequestResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct FBAInboundServiceMWS_Model_ConfirmTransportRequestResponse from provided XML. 
+            throw new \Exception ("Unable to construct FBAInboundServiceMWS_Model_ConfirmTransportRequestResponse from provided XML.
                                   Make sure that ConfirmTransportRequestResponse is a root element");
         }
     }

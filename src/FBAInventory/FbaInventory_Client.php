@@ -68,7 +68,7 @@ class FbaInventory_Client implements FbaInventory_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof FbaInventory_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\FbaInventory_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new FbaInventory_Model_GetServiceStatusRequest($request);
         }
@@ -77,7 +77,7 @@ class FbaInventory_Client implements FbaInventory_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = FbaInventory_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FbaInventory_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -145,7 +145,7 @@ class FbaInventory_Client implements FbaInventory_Interface
      */
     public function listInventorySupply($request)
     {
-        if (!($request instanceof FbaInventory_Model_ListInventorySupplyRequest)) {
+        if (!($request instanceof Model\FbaInventory_Model_ListInventorySupplyRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListInventorySupplyRequest.php');
             $request = new FbaInventory_Model_ListInventorySupplyRequest($request);
         }
@@ -154,7 +154,7 @@ class FbaInventory_Client implements FbaInventory_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListInventorySupplyResponse.php');
-        $response = FbaInventory_Model_ListInventorySupplyResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FbaInventory_Model_ListInventorySupplyResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -212,7 +212,7 @@ class FbaInventory_Client implements FbaInventory_Interface
      */
     public function listInventorySupplyByNextToken($request)
     {
-        if (!($request instanceof FbaInventory_Model_ListInventorySupplyByNextTokenRequest)) {
+        if (!($request instanceof Model\FbaInventory_Model_ListInventorySupplyByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenRequest.php');
             $request = new FbaInventory_Model_ListInventorySupplyByNextTokenRequest($request);
         }
@@ -221,7 +221,7 @@ class FbaInventory_Client implements FbaInventory_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenResponse.php');
-        $response = FbaInventory_Model_ListInventorySupplyByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\FbaInventory_Model_ListInventorySupplyByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -751,7 +751,7 @@ class FbaInventory_Client implements FbaInventory_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -794,7 +794,7 @@ class FbaInventory_Client implements FbaInventory_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

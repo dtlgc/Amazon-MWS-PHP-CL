@@ -198,14 +198,14 @@ use Amazon\MWS\Customer\Customer_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListCustomersResponse']");
         if ($response->length == 1) {
             return new Customer_Model_ListCustomersResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSCustomerService_Model_ListCustomersResponse from provided XML. 
+            throw new \Exception ("Unable to construct MWSCustomerService_Model_ListCustomersResponse from provided XML.
                                   Make sure that ListCustomersResponse is a root element");
         }
     }

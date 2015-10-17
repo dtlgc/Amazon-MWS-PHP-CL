@@ -42,7 +42,7 @@ use Amazon\MWS\Cart\Cart_Model;
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'CartList' => array('FieldValue' => array(), 'FieldType' => array('MWSCartService_Model_Cart'), 'ListMemberName' => 'Cart'),
+    'CartList' => array('FieldValue' => array(), 'FieldType' => array('Cart_Model_Cart'), 'ListMemberName' => 'Cart'),
     );
     parent::__construct($data);
     }

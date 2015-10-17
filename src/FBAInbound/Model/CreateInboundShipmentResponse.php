@@ -198,14 +198,14 @@ use Amazon\MWS\FBAInbound\MWSFBAInboundService_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='CreateInboundShipmentResponse']");
         if ($response->length == 1) {
             return new FBAInboundServiceMWS_Model_CreateInboundShipmentResponse(($response->item(0))); 
         } else {
-            throw new Exception ("Unable to construct FBAInboundServiceMWS_Model_CreateInboundShipmentResponse from provided XML. 
+            throw new \Exception ("Unable to construct FBAInboundServiceMWS_Model_CreateInboundShipmentResponse from provided XML.
                                   Make sure that CreateInboundShipmentResponse is a root element");
         }
     }

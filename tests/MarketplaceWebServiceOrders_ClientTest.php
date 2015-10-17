@@ -11,7 +11,8 @@ class MarketplaceWebServiceOrders_ClientTest extends PHPUnit_Framework_TestCase
 	function testGetOrder()
 	{
 		$dotenv = new Dotenv();
-		$dotenv->load();
+		$root = dirname(dirname(__FILE__));
+		$dotenv->load($root);
 		$dotenv->required(['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'APPLICATION_NAME', 'APPLICATION_VERSION']);
 
 		$serviceUrl = "https://mws.amazonservices.com/Orders/2013-09-01";
@@ -25,7 +26,7 @@ class MarketplaceWebServiceOrders_ClientTest extends PHPUnit_Framework_TestCase
 			'MaxErrorRetry' => 3,
 		);
 
-		$service = new MarketplaceWebServiceOrders_Client(
+		$service = new \Amazon\MWS\Orders\Orders_Client(
 			getenv("AWS_ACCESS_KEY_ID"),
 			getenv("AWS_SECRET_ACCESS_KEY"),
 			getenv("APPLICATION_NAME"),
@@ -49,10 +50,13 @@ class MarketplaceWebServiceOrders_ClientTest extends PHPUnit_Framework_TestCase
 		 * sample for Get Order Action
 		 ***********************************************************************/
 		// @TODO: set request. Action can be passed as Orders_Model_GetOrder
-		$request = new Orders_Model_GetOrderRequest();
-		$request->setSellerId(getenv("MERCHANT_ID"));
+		$request = new \Amazon\MWS\Orders\Model\Orders_Model_GetOrderRequest([
+			'AmazonOrderId'=>'114-9172390-8828251',
+			'SellerId'=>getenv("SELLER_ID"),
+		]);
+//		$request->setSellerId(getenv("MERCHANT_ID"));
+//		$request->setAmazonOrderId('114-9172390-8828251');
 		// object or array of parameters
-		invokeGetOrder($service, $request);
 
 		/**
 		 * Get Get Order Action Sample
@@ -69,7 +73,7 @@ class MarketplaceWebServiceOrders_ClientTest extends PHPUnit_Framework_TestCase
 			echo ("Service Response\n");
 			echo ("=============================================================================\n");
 
-			$dom = new DOMDocument();
+			$dom = new \DOMDocument();
 			$dom->loadXML($response->toXML());
 			$dom->preserveWhiteSpace = false;
 			$dom->formatOutput = true;

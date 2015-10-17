@@ -74,7 +74,7 @@
  * sample for List Order Items Action
  ***********************************************************************/
  // @TODO: set request. Action can be passed as Orders_Model_ListOrderItems
- $request = new Orders_Model_ListOrderItemsRequest();
+ $request = new \Amazon\MWS\Orders\Model\Orders_Model_ListOrderItemsRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListOrderItems($service, $request);
@@ -96,7 +96,7 @@
         echo ("Service Response\n");
         echo ("=============================================================================\n");
 
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($response->toXML());
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;

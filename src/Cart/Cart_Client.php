@@ -62,24 +62,24 @@ class Cart_Client implements Cart_Interface
      *         There is a maximum number of customer IDs supported per request.
      *         See service documentation for that limit.
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_GetCarts request or MWSCartService_Model_GetCarts object itself
-     * @see MWSCartService_Model_GetCartsRequest
-     * @return MWSCartService_Model_GetCartsResponse
+     * @param mixed $request array of parameters for Cart_Model_GetCarts request or Cart_Model_GetCarts object itself
+     * @see Cart_Model_GetCartsRequest
+     * @return Cart_Model_GetCartsResponse
      *
      * @throws Cart_Exception
      */
     public function getCarts($request)
     {
-        if (!($request instanceof MWSCartService_Model_GetCartsRequest)) {
+        if (!($request instanceof Model\Cart_Model_GetCartsRequest)) {
 //            //require_once (dirname(__FILE__) . '/Model/GetCartsRequest.php');
-            $request = new MWSCartService_Model_GetCartsRequest($request);
+            $request = new Cart_Model_GetCartsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCarts';
         $httpResponse = $this->_invoke($parameters);
 
 //        //require_once (dirname(__FILE__) . '/Model/GetCartsResponse.php');
-        $response = MWSCartService_Model_GetCartsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Cart_Model_GetCartsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -119,24 +119,24 @@ class Cart_Client implements Cart_Interface
      *         in a single response, a next token is provided which can be used
      *         to obtain more results via ListCartsByNextToken.
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_ListCarts request or MWSCartService_Model_ListCarts object itself
-     * @see MWSCartService_Model_ListCartsRequest
-     * @return MWSCartService_Model_ListCartsResponse
+     * @param mixed $request array of parameters for Cart_Model_ListCarts request or Cart_Model_ListCarts object itself
+     * @see Cart_Model_ListCartsRequest
+     * @return Cart_Model_ListCartsResponse
      *
      * @throws Cart_Exception
      */
     public function listCarts($request)
     {
-        if (!($request instanceof MWSCartService_Model_ListCartsRequest)) {
+        if (!($request instanceof Model\Cart_Model_ListCartsRequest)) {
 //            //require_once (dirname(__FILE__) . '/Model/ListCartsRequest.php');
-            $request = new MWSCartService_Model_ListCartsRequest($request);
+            $request = new Cart_Model_ListCartsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListCarts';
         $httpResponse = $this->_invoke($parameters);
 
 //        //require_once (dirname(__FILE__) . '/Model/ListCartsResponse.php');
-        $response = MWSCartService_Model_ListCartsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Cart_Model_ListCartsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -178,24 +178,24 @@ class Cart_Client implements Cart_Interface
      *         ListCarts or ListCartsByNextToken. The output includes a next token
      *         that can be used to obtain the next page of results, if there are any.
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_ListCartsByNextToken request or MWSCartService_Model_ListCartsByNextToken object itself
-     * @see MWSCartService_Model_ListCartsByNextTokenRequest
-     * @return MWSCartService_Model_ListCartsByNextTokenResponse
+     * @param mixed $request array of parameters for Cart_Model_ListCartsByNextToken request or Cart_Model_ListCartsByNextToken object itself
+     * @see Cart_Model_ListCartsByNextTokenRequest
+     * @return Cart_Model_ListCartsByNextTokenResponse
      *
      * @throws Cart_Exception
      */
     public function listCartsByNextToken($request)
     {
-        if (!($request instanceof MWSCartService_Model_ListCartsByNextTokenRequest)) {
+        if (!($request instanceof Model\Cart_Model_ListCartsByNextTokenRequest)) {
 //            //require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenRequest.php');
-            $request = new MWSCartService_Model_ListCartsByNextTokenRequest($request);
+            $request = new Cart_Model_ListCartsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListCartsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
 //        //require_once (dirname(__FILE__) . '/Model/ListCartsByNextTokenResponse.php');
-        $response = MWSCartService_Model_ListCartsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Cart_Model_ListCartsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -229,24 +229,24 @@ class Cart_Client implements Cart_Interface
      * Get Service Status
      * 
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_GetServiceStatus request or MWSCartService_Model_GetServiceStatus object itself
-     * @see MWSCartService_Model_GetServiceStatusRequest
-     * @return MWSCartService_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for Cart_Model_GetServiceStatus request or Cart_Model_GetServiceStatus object itself
+     * @see Cart_Model_GetServiceStatusRequest
+     * @return Cart_Model_GetServiceStatusResponse
      *
      * @throws Cart_Exception
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSCartService_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\Cart_Model_GetServiceStatusRequest)) {
 //            //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MWSCartService_Model_GetServiceStatusRequest($request);
+            $request = new Cart_Model_GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
 //        //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSCartService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\Cart_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -669,7 +669,7 @@ class Cart_Client implements Cart_Interface
         }
  
 //        //require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MWSCartService_Model_ResponseHeaderMetadata(
+        return new Cart_Model_ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],

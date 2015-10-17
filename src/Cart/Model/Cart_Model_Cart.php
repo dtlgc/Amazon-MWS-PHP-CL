@@ -28,7 +28,7 @@ use Amazon\MWS\Cart\Cart_Model;
 
 
 /**
- * MWSCartService_Model_Cart
+ * Cart_Model_Cart
  * 
  * Properties:
  * <ul>
@@ -57,8 +57,8 @@ use Amazon\MWS\Cart\Cart_Model;
     'NumberOfSavedItems' => array('FieldValue' => null, 'FieldType' => 'int'),
     'CustomerId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'CartType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ActiveCartItemList' => array('FieldValue' => array(), 'FieldType' => array('MWSCartService_Model_CartItem'), 'ListMemberName' => 'CartItem'),
-    'SavedCartItemList' => array('FieldValue' => array(), 'FieldType' => array('MWSCartService_Model_CartItem'), 'ListMemberName' => 'CartItem'),
+    'ActiveCartItemList' => array('FieldValue' => array(), 'FieldType' => array('Cart_Model_CartItem'), 'ListMemberName' => 'CartItem'),
+    'SavedCartItemList' => array('FieldValue' => array(), 'FieldType' => array('Cart_Model_CartItem'), 'ListMemberName' => 'CartItem'),
     'LastUpdatedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SessionId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'CartId' => array('FieldValue' => null, 'FieldType' => 'string'),

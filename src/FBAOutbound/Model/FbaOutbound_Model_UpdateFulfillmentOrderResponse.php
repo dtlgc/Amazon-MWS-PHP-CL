@@ -150,14 +150,14 @@ use Amazon\MWS\FBAOutbound\FbaOutbound_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='UpdateFulfillmentOrderResponse']");
         if ($response->length == 1) {
             return new FbaOutbound_Model_UpdateFulfillmentOrderResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MwsFbaOutboundServiceModel_UpdateFulfillmentOrderResponse from provided XML.
+            throw new \Exception ("Unable to construct MwsFbaOutboundServiceModel_UpdateFulfillmentOrderResponse from provided XML.
                                   Make sure that UpdateFulfillmentOrderResponse is a root element");
         }
     }

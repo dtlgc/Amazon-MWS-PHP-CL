@@ -198,14 +198,14 @@ use Amazon\MWS\Subscriptions\Subscriptions_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetSubscriptionResponse']");
         if ($response->length == 1) {
             return new Subscriptions_Model_GetSubscriptionResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSSubscriptions_Model_GetSubscriptionResponse from provided XML.
+            throw new \Exception ("Unable to construct MWSSubscriptions_Model_GetSubscriptionResponse from provided XML.
                                   Make sure that GetSubscriptionResponse is a root element");
         }
     }

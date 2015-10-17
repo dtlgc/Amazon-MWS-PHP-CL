@@ -198,14 +198,14 @@ use Amazon\MWS\Sellers\Sellers_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListMarketplaceParticipationsResponse']");
         if ($response->length == 1) {
             return new Sellers_Model_ListMarketplaceParticipationsResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsResponse from provided XML. 
+            throw new \Exception ("Unable to construct MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsResponse from provided XML.
                                   Make sure that ListMarketplaceParticipationsResponse is a root element");
         }
     }

@@ -27,14 +27,14 @@ use Amazon\MWS\Cart\Cart_Model;
 
 
 /**
- * MWSCartService_Model_ListCartsByNextTokenResponse
+ * Cart_Model_ListCartsByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>ListCartsByNextTokenResult: MWSCartService_Model_ListCartsByNextTokenResult</li>
- * <li>ResponseMetadata: MWSCartService_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MWSCartService_Model_ResponseHeaderMetadata</li>
+ * <li>ListCartsByNextTokenResult: Cart_Model_ListCartsByNextTokenResult</li>
+ * <li>ResponseMetadata: Cart_Model_ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: Cart_Model_ResponseHeaderMetadata</li>
  *
  * </ul>
  */
@@ -44,9 +44,9 @@ use Amazon\MWS\Cart\Cart_Model;
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ListCartsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ListCartsByNextTokenResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseHeaderMetadata'),
+    'ListCartsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_ListCartsByNextTokenResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -64,7 +64,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the ListCartsByNextTokenResult property.
      *
-     * @param MWSCartService_Model_ListCartsByNextTokenResult listCartsByNextTokenResult
+     * @param Cart_Model_ListCartsByNextTokenResult listCartsByNextTokenResult
      * @return this instance
      */
     public function setListCartsByNextTokenResult($value)
@@ -110,7 +110,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MWSCartService_Model_ResponseMetadata Cart_Model_ResponseMetadata
+     * @param Cart_Model_ResponseMetadata Cart_Model_ResponseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -156,7 +156,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MWSCartService_Model_ResponseHeaderMetadata Cart_Model_ResponseHeaderMetadata
+     * @param Cart_Model_ResponseHeaderMetadata Cart_Model_ResponseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -189,7 +189,7 @@ use Amazon\MWS\Cart\Cart_Model;
         return $this;
     }
     /**
-     * Construct MWSCartService_Model_ListCartsByNextTokenResponse from XML string
+     * Construct Cart_Model_ListCartsByNextTokenResponse from XML string
      * 
      * @param $xml
      *        XML string to construct from
@@ -198,14 +198,14 @@ use Amazon\MWS\Cart\Cart_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListCartsByNextTokenResponse']");
         if ($response->length == 1) {
             return new Cart_Model_ListCartsByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSCartService_Model_ListCartsByNextTokenResponse from provided XML. 
+            throw new \Exception ("Unable to construct Cart_Model_ListCartsByNextTokenResponse from provided XML.
                                   Make sure that ListCartsByNextTokenResponse is a root element");
         }
     }

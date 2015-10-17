@@ -32,9 +32,9 @@ use Amazon\MWS\Cart\Cart_Model;
  * Properties:
  * <ul>
  * 
- * <li>GetServiceStatusResult: MWSCartService_Model_GetServiceStatusResult</li>
- * <li>ResponseMetadata: MWSCartService_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MWSCartService_Model_ResponseHeaderMetadata</li>
+ * <li>GetServiceStatusResult: Cart_Model_GetServiceStatusResult</li>
+ * <li>ResponseMetadata: Cart_Model_ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: Cart_Model_ResponseHeaderMetadata</li>
  *
  * </ul>
  */
@@ -44,9 +44,9 @@ use Amazon\MWS\Cart\Cart_Model;
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_GetServiceStatusResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_ResponseHeaderMetadata'),
+    'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_GetServiceStatusResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -64,7 +64,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the GetServiceStatusResult property.
      *
-     * @param MWSCartService_Model_GetServiceStatusResult Cart_Model_GetStatusResult
+     * @param Cart_Model_GetServiceStatusResult Cart_Model_GetStatusResult
      * @return this instance
      */
     public function setGetServiceStatusResult($value)
@@ -110,7 +110,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MWSCartService_Model_ResponseMetadata Cart_Model_ResponseMetadata
+     * @param Cart_Model_ResponseMetadata Cart_Model_ResponseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -156,7 +156,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MWSCartService_Model_ResponseHeaderMetadata Cart_Model_ResponseHeaderMetadata
+     * @param Cart_Model_ResponseHeaderMetadata Cart_Model_ResponseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -198,14 +198,14 @@ use Amazon\MWS\Cart\Cart_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetServiceStatusResponse']");
         if ($response->length == 1) {
             return new Cart_Model_GetStatusResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct GetServiceStatusResponse from provided XML.
+            throw new \Exception ("Unable to construct GetServiceStatusResponse from provided XML.
                                   Make sure that GetServiceStatusResponse is a root element");
         }
     }

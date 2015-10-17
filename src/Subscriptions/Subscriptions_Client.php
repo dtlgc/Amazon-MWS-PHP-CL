@@ -65,7 +65,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function createSubscription($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_CreateSubscriptionInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_CreateSubscriptionInput)) {
             //require_once (dirname(__FILE__) . '/Model/CreateSubscriptionInput.php');
             $request = new MWSSubscriptions_Model_CreateSubscriptionInput($request);
         }
@@ -74,7 +74,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/CreateSubscriptionResponse.php');
-        $response = MWSSubscriptions_Model_CreateSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_CreateSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -119,7 +119,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function deleteSubscription($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_DeleteSubscriptionInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_DeleteSubscriptionInput)) {
             //require_once (dirname(__FILE__) . '/Model/DeleteSubscriptionInput.php');
             $request = new MWSSubscriptions_Model_DeleteSubscriptionInput($request);
         }
@@ -128,7 +128,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/DeleteSubscriptionResponse.php');
-        $response = MWSSubscriptions_Model_DeleteSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_DeleteSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -176,7 +176,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function deregisterDestination($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_DeregisterDestinationInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_DeregisterDestinationInput)) {
             //require_once (dirname(__FILE__) . '/Model/DeregisterDestinationInput.php');
             $request = new MWSSubscriptions_Model_DeregisterDestinationInput($request);
         }
@@ -185,7 +185,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/DeregisterDestinationResponse.php');
-        $response = MWSSubscriptions_Model_DeregisterDestinationResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_DeregisterDestinationResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -230,7 +230,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function getSubscription($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_GetSubscriptionInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_GetSubscriptionInput)) {
             //require_once (dirname(__FILE__) . '/Model/GetSubscriptionInput.php');
             $request = new MWSSubscriptions_Model_GetSubscriptionInput($request);
         }
@@ -239,7 +239,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetSubscriptionResponse.php');
-        $response = MWSSubscriptions_Model_GetSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_GetSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -287,7 +287,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function listRegisteredDestinations($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_ListRegisteredDestinationsInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_ListRegisteredDestinationsInput)) {
             //require_once (dirname(__FILE__) . '/Model/ListRegisteredDestinationsInput.php');
             $request = new MWSSubscriptions_Model_ListRegisteredDestinationsInput($request);
         }
@@ -296,7 +296,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListRegisteredDestinationsResponse.php');
-        $response = MWSSubscriptions_Model_ListRegisteredDestinationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_ListRegisteredDestinationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -335,7 +335,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function listSubscriptions($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_ListSubscriptionsInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_ListSubscriptionsInput)) {
             //require_once (dirname(__FILE__) . '/Model/ListSubscriptionsInput.php');
             $request = new MWSSubscriptions_Model_ListSubscriptionsInput($request);
         }
@@ -344,7 +344,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListSubscriptionsResponse.php');
-        $response = MWSSubscriptions_Model_ListSubscriptionsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_ListSubscriptionsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -383,7 +383,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function registerDestination($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_RegisterDestinationInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_RegisterDestinationInput)) {
             //require_once (dirname(__FILE__) . '/Model/RegisterDestinationInput.php');
             $request = new MWSSubscriptions_Model_RegisterDestinationInput($request);
         }
@@ -392,7 +392,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/RegisterDestinationResponse.php');
-        $response = MWSSubscriptions_Model_RegisterDestinationResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_RegisterDestinationResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -437,7 +437,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function sendTestNotificationToDestination($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_SendTestNotificationToDestinationInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_SendTestNotificationToDestinationInput)) {
             //require_once (dirname(__FILE__) . '/Model/SendTestNotificationToDestinationInput.php');
             $request = new MWSSubscriptions_Model_SendTestNotificationToDestinationInput($request);
         }
@@ -446,7 +446,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/SendTestNotificationToDestinationResponse.php');
-        $response = MWSSubscriptions_Model_SendTestNotificationToDestinationResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_SendTestNotificationToDestinationResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -491,7 +491,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function updateSubscription($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_UpdateSubscriptionInput)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_UpdateSubscriptionInput)) {
             //require_once (dirname(__FILE__) . '/Model/UpdateSubscriptionInput.php');
             $request = new MWSSubscriptions_Model_UpdateSubscriptionInput($request);
         }
@@ -500,7 +500,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/UpdateSubscriptionResponse.php');
-        $response = MWSSubscriptions_Model_UpdateSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_UpdateSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -545,7 +545,7 @@ class Subscriptions_Client implements Subscriptions_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSSubscriptions_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MWSSubscriptions_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MWSSubscriptions_Model_GetServiceStatusRequest($request);
         }
@@ -554,7 +554,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSSubscriptions_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSSubscriptions_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -1073,7 +1073,7 @@ class Subscriptions_Client implements Subscriptions_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -1116,7 +1116,7 @@ class Subscriptions_Client implements Subscriptions_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

@@ -198,14 +198,14 @@ use Amazon\MWS\Customer\Customer_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListCustomersByNextTokenResponse']");
         if ($response->length == 1) {
             return new Customer_Model_ListCustomersByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSCustomerService_Model_ListCustomersByNextTokenResponse from provided XML. 
+            throw new \Exception ("Unable to construct MWSCustomerService_Model_ListCustomersByNextTokenResponse from provided XML.
                                   Make sure that ListCustomersByNextTokenResponse is a root element");
         }
     }

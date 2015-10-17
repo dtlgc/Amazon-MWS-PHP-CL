@@ -28,9 +28,9 @@ interface  Cart_Interface
      *         There is a maximum number of customer IDs supported per request.
      *         See service documentation for that limit.
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_GetCarts request or MWSCartService_Model_GetCarts object itself
-     * @see MWSCartService_Model_GetCartsRequest
-     * @return MWSCartService_Model_GetCartsResponse
+     * @param mixed $request array of parameters for Cart_Model_GetCarts request or Cart_Model_GetCarts object itself
+     * @see Cart_Model_GetCartsRequest
+     * @return Cart_Model_GetCartsResponse
      *
      * @throws Cart_Exception
      */
@@ -44,9 +44,9 @@ interface  Cart_Interface
      *         in a single response, a next token is provided which can be used
      *         to obtain more results via ListCartsByNextToken.
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_ListCarts request or MWSCartService_Model_ListCarts object itself
-     * @see MWSCartService_Model_ListCartsRequest
-     * @return MWSCartService_Model_ListCartsResponse
+     * @param mixed $request array of parameters for Cart_Model_ListCarts request or Cart_Model_ListCarts object itself
+     * @see Cart_Model_ListCartsRequest
+     * @return Cart_Model_ListCartsResponse
      *
      * @throws Cart_Exception
      */
@@ -59,9 +59,9 @@ interface  Cart_Interface
      *         ListCarts or ListCartsByNextToken. The output includes a next token
      *         that can be used to obtain the next page of results, if there are any.
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_ListCartsByNextToken request or MWSCartService_Model_ListCartsByNextToken object itself
-     * @see MWSCartService_Model_ListCartsByNextTokenRequest
-     * @return MWSCartService_Model_ListCartsByNextTokenResponse
+     * @param mixed $request array of parameters for Cart_Model_ListCartsByNextToken request or Cart_Model_ListCartsByNextToken object itself
+     * @see Cart_Model_ListCartsByNextTokenRequest
+     * @return Cart_Model_ListCartsByNextTokenResponse
      *
      * @throws Cart_Exception
      */
@@ -72,9 +72,9 @@ interface  Cart_Interface
      * Get Service Status
      * 
      *
-     * @param mixed $request array of parameters for MWSCartService_Model_GetServiceStatus request or MWSCartService_Model_GetServiceStatus object itself
-     * @see MWSCartService_Model_GetServiceStatusRequest
-     * @return MWSCartService_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for Cart_Model_GetServiceStatus request or Cart_Model_GetServiceStatus object itself
+     * @see Cart_Model_GetServiceStatusRequest
+     * @return Cart_Model_GetServiceStatusResponse
      *
      * @throws Cart_Exception
      */

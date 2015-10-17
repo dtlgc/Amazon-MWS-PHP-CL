@@ -66,7 +66,7 @@ class Products_Client implements Products_Interface
      */
     public function getCompetitivePricingForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest($request);
         }
@@ -75,7 +75,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -121,7 +121,7 @@ class Products_Client implements Products_Interface
      */
     public function getCompetitivePricingForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest($request);
         }
@@ -130,7 +130,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -176,7 +176,7 @@ class Products_Client implements Products_Interface
      */
     public function getLowestOfferListingsForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest($request);
         }
@@ -185,7 +185,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -237,7 +237,7 @@ class Products_Client implements Products_Interface
      */
     public function getLowestOfferListingsForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest($request);
         }
@@ -246,7 +246,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -298,7 +298,7 @@ class Products_Client implements Products_Interface
      */
     public function getMatchingProduct($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMatchingProductRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetMatchingProductRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetMatchingProductRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMatchingProductRequest($request);
         }
@@ -307,7 +307,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMatchingProductResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetMatchingProductResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -353,7 +353,7 @@ class Products_Client implements Products_Interface
      */
     public function getMatchingProductForId($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest($request);
         }
@@ -362,7 +362,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -410,7 +410,7 @@ class Products_Client implements Products_Interface
      */
     public function getMyPriceForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest($request);
         }
@@ -419,7 +419,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -464,7 +464,7 @@ class Products_Client implements Products_Interface
      */
     public function getMyPriceForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest($request);
         }
@@ -473,7 +473,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -519,7 +519,7 @@ class Products_Client implements Products_Interface
      */
     public function getProductCategoriesForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest($request);
         }
@@ -528,7 +528,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -571,7 +571,7 @@ class Products_Client implements Products_Interface
      */
     public function getProductCategoriesForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest($request);
         }
@@ -580,7 +580,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -624,7 +624,7 @@ class Products_Client implements Products_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetServiceStatusRequest($request);
         }
@@ -633,7 +633,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -670,7 +670,7 @@ class Products_Client implements Products_Interface
      */
     public function listMatchingProducts($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListMatchingProductsRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest($request);
         }
@@ -679,7 +679,7 @@ class Products_Client implements Products_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -1207,7 +1207,7 @@ class Products_Client implements Products_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -1250,7 +1250,7 @@ class Products_Client implements Products_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

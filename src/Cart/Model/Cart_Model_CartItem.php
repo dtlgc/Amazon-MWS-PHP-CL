@@ -28,7 +28,7 @@ use Amazon\MWS\Cart\Cart_Model;
 
 
 /**
- * MWSCartService_Model_CartItem
+ * Cart_Model_CartItem
  * 
  * Properties:
  * <ul>
@@ -36,8 +36,8 @@ use Amazon\MWS\Cart\Cart_Model;
  * <li>ASIN: string</li>
  * <li>SellerSKU: string</li>
  * <li>Title: string</li>
- * <li>CurrentPrice: MWSCartService_Model_CurrencyAmount</li>
- * <li>SalePrice: MWSCartService_Model_CurrencyAmount</li>
+ * <li>CurrentPrice: Cart_Model_CurrencyAmount</li>
+ * <li>SalePrice: Cart_Model_CurrencyAmount</li>
  * <li>Quantity: int</li>
  * <li>ProductPageURL: string</li>
  * <li>MainProductImageURL: string</li>
@@ -54,8 +54,8 @@ use Amazon\MWS\Cart\Cart_Model;
     'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Title' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CurrentPrice' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_CurrencyAmount'),
-    'SalePrice' => array('FieldValue' => null, 'FieldType' => 'MWSCartService_Model_CurrencyAmount'),
+    'CurrentPrice' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_CurrencyAmount'),
+    'SalePrice' => array('FieldValue' => null, 'FieldType' => 'Cart_Model_CurrencyAmount'),
     'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
     'ProductPageURL' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MainProductImageURL' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -215,7 +215,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the CurrentPrice property.
      *
-     * @param MWSCartService_Model_CurrencyAmount currentPrice
+     * @param Cart_Model_CurrencyAmount currentPrice
      * @return this instance
      */
     public function setCurrentPrice($value)
@@ -261,7 +261,7 @@ use Amazon\MWS\Cart\Cart_Model;
     /**
      * Set the value of the SalePrice property.
      *
-     * @param MWSCartService_Model_CurrencyAmount salePrice
+     * @param Cart_Model_CurrencyAmount salePrice
      * @return this instance
      */
     public function setSalePrice($value)

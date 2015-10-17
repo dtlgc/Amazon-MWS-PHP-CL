@@ -198,14 +198,14 @@ use Amazon\MWS\FBAInventory\FbaInventory_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListInventorySupplyResponse']");
         if ($response->length == 1) {
             return new FbaInventory_Model_ListInventorySupplyResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct FbaInventory_Model_ListInventorySupplyResponse from provided XML.
+            throw new \Exception ("Unable to construct FbaInventory_Model_ListInventorySupplyResponse from provided XML.
                                   Make sure that ListInventorySupplyResponse is a root element");
         }
     }

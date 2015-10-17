@@ -27,7 +27,7 @@ use Amazon\MWS\Cart\Cart_Model;
 
 
 /**
- * MWSCartService_Model_GetCartsRequest
+ * Cart_Model_GetCartsRequest
  * 
  * Properties:
  * <ul>

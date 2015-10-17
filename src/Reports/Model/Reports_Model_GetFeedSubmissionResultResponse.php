@@ -68,15 +68,15 @@ class Reports_Model_GetFeedSubmissionResultResponse extends Reports_Model
      * @return MaReports_Model_GetFeedSubmissionResultResponse     */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetFeedSubmissionResultResponse');
         if ($response->length == 1) {
             return new Reports_Model_GetFeedSubmissionResultResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionResultResponse from provided XML. 
+            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionResultResponse from provided XML.
                                   Make sure that GetFeedSubmissionResultResponse is a root element");
         }
           

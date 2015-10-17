@@ -73,8 +73,8 @@
  * Setup request parameters and uncomment invoke to try out
  * sample for List Carts Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSCartService_Model_ListCarts
- $request = new MWSCartService_Model_ListCartsRequest();
+ // @TODO: set request. Action can be passed as Cart_Model_ListCarts
+ $request = new Cart_Model_ListCartsRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListCarts($service, $request);
@@ -85,7 +85,7 @@
   * the MarketplaceId and ASIN.
   *
   * @param MWSCartService_Interface $service instance of MWSCartService_Interface
-  * @param mixed $request MWSCartService_Model_ListCarts or array of parameters
+  * @param mixed $request Cart_Model_ListCarts or array of parameters
   */
 
   function invokeListCarts(MWSCartService_Interface $service, $request)
@@ -96,7 +96,7 @@
         echo ("Service Response\n");
         echo ("=============================================================================\n");
 
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($response->toXML());
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;

@@ -74,7 +74,7 @@
  * sample for Get Order Action
  ***********************************************************************/
  // @TODO: set request. Action can be passed as Orders_Model_GetOrder
- $request = new Orders_Model_GetOrderRequest();
+ $request = new \Amazon\MWS\Orders\Model\Orders_Model_GetOrderRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetOrder($service, $request);
@@ -96,7 +96,7 @@
         echo ("Service Response\n");
         echo ("=============================================================================\n");
 
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($response->toXML());
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;

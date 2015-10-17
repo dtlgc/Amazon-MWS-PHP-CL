@@ -73,8 +73,8 @@
  * Setup request parameters and uncomment invoke to try out
  * sample for List Carts By Next Token Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSCartService_Model_ListCartsByNextToken
- $request = new MWSCartService_Model_ListCartsByNextTokenRequest();
+ // @TODO: set request. Action can be passed as Cart_Model_ListCartsByNextToken
+ $request = new Cart_Model_ListCartsByNextTokenRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListCartsByNextToken($service, $request);
@@ -85,7 +85,7 @@
   * the MarketplaceId and ASIN.
   *
   * @param MWSCartService_Interface $service instance of MWSCartService_Interface
-  * @param mixed $request MWSCartService_Model_ListCartsByNextToken or array of parameters
+  * @param mixed $request Cart_Model_ListCartsByNextToken or array of parameters
   */
 
   function invokeListCartsByNextToken(MWSCartService_Interface $service, $request)
@@ -96,7 +96,7 @@
         echo ("Service Response\n");
         echo ("=============================================================================\n");
 
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($response->toXML());
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;

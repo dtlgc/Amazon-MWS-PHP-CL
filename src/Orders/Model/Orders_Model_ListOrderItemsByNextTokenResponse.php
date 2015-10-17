@@ -198,14 +198,14 @@ use Amazon\MWS\Orders\Orders_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListOrderItemsByNextTokenResponse']");
         if ($response->length == 1) {
             return new Orders_Model_ListOrderItemsByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct Orders_Model_ListOrderItemsByNextTokenResponse from provided XML.
+            throw new \Exception ("Unable to construct Orders_Model_ListOrderItemsByNextTokenResponse from provided XML.
                                   Make sure that ListOrderItemsByNextTokenResponse is a root element");
         }
     }

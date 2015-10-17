@@ -67,7 +67,7 @@ class Sellers_Client implements Sellers_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MarketplaceWebServiceSellers_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceSellers_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MarketplaceWebServiceSellers_Model_GetServiceStatusRequest($request);
         }
@@ -76,7 +76,7 @@ class Sellers_Client implements Sellers_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MarketplaceWebServiceSellers_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceSellers_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -113,7 +113,7 @@ class Sellers_Client implements Sellers_Interface
      */
     public function listMarketplaceParticipations($request)
     {
-        if (!($request instanceof MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsRequest.php');
             $request = new MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsRequest($request);
         }
@@ -122,7 +122,7 @@ class Sellers_Client implements Sellers_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsResponse.php');
-        $response = MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -160,7 +160,7 @@ class Sellers_Client implements Sellers_Interface
      */
     public function listMarketplaceParticipationsByNextToken($request)
     {
-        if (!($request instanceof MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsByNextTokenRequest.php');
             $request = new MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenRequest($request);
         }
@@ -169,7 +169,7 @@ class Sellers_Client implements Sellers_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsByNextTokenResponse.php');
-        $response = MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -691,7 +691,7 @@ class Sellers_Client implements Sellers_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -734,7 +734,7 @@ class Sellers_Client implements Sellers_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

@@ -66,7 +66,7 @@ class Webstore_Client implements Webstore_Interface
      */
     public function getSubscriptionDetails($request)
     {
-        if (!($request instanceof MarketplaceWebServiceWebstore_Model_GetSubscriptionDetailsRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceWebstore_Model_GetSubscriptionDetailsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetSubscriptionDetailsRequest.php');
             $request = new MarketplaceWebServiceWebstore_Model_GetSubscriptionDetailsRequest($request);
         }
@@ -75,7 +75,7 @@ class Webstore_Client implements Webstore_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetSubscriptionDetailsResponse.php');
-        $response = MarketplaceWebServiceWebstore_Model_GetSubscriptionDetailsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceWebstore_Model_GetSubscriptionDetailsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -129,7 +129,7 @@ class Webstore_Client implements Webstore_Interface
      */
     public function listSubscriptionsCount($request)
     {
-        if (!($request instanceof MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListSubscriptionsCountRequest.php');
             $request = new MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountRequest($request);
         }
@@ -138,7 +138,7 @@ class Webstore_Client implements Webstore_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListSubscriptionsCountResponse.php');
-        $response = MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -192,7 +192,7 @@ class Webstore_Client implements Webstore_Interface
      */
     public function listSubscriptionsCountByNextToken($request)
     {
-        if (!($request instanceof MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListSubscriptionsCountByNextTokenRequest.php');
             $request = new MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenRequest($request);
         }
@@ -201,7 +201,7 @@ class Webstore_Client implements Webstore_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListSubscriptionsCountByNextTokenResponse.php');
-        $response = MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -240,7 +240,7 @@ class Webstore_Client implements Webstore_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MarketplaceWebServiceWebstore_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MarketplaceWebServiceWebstore_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MarketplaceWebServiceWebstore_Model_GetServiceStatusRequest($request);
         }
@@ -249,7 +249,7 @@ class Webstore_Client implements Webstore_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MarketplaceWebServiceWebstore_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MarketplaceWebServiceWebstore_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -768,7 +768,7 @@ class Webstore_Client implements Webstore_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -811,7 +811,7 @@ class Webstore_Client implements Webstore_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

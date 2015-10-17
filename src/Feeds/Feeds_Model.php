@@ -39,7 +39,7 @@ abstract class Feeds_Model
             } elseif ($this->isDOMElement($data)) {
                 $this->fromDOMElement($data);
             } else {
-                throw new Exception ("Unable to construct from provided data. 
+                throw new \Exception ("Unable to construct from provided data.
                                 Please be sure to pass associative array or DOMElement");
             }
             
@@ -157,9 +157,9 @@ abstract class Feeds_Model
      * 
      * @param DOMElement $dom XML element to construct from
      */
-    private function fromDOMElement(DOMElement $dom)
+    private function fromDOMElement(\DOMElement $dom)
     {
-        $xpath = new DOMXPath($dom->ownerDocument);
+        $xpath = new \DOMXPath($dom->ownerDocument);
         $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         
         foreach ($this->fields as $fieldName => $field) {
@@ -295,7 +295,7 @@ abstract class Feeds_Model
     * @return TRUE if passed variable is DOMElement
     */
     private function isDOMElement($var) {
-        return $var instanceof DOMElement;
+        return $var instanceof \DOMElement;
     }
 
    /**

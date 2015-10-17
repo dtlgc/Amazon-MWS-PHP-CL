@@ -198,14 +198,14 @@ use Amazon\MWS\Webstore\Webstore_Model;
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListSubscriptionsCountByNextTokenResponse']");
         if ($response->length == 1) {
             return new Webstore_Model_ListSubscriptionsCountByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenResponse from provided XML. 
+            throw new \Exception ("Unable to construct MarketplaceWebServiceWebstore_Model_ListSubscriptionsCountByNextTokenResponse from provided XML.
                                   Make sure that ListSubscriptionsCountByNextTokenResponse is a root element");
         }
     }

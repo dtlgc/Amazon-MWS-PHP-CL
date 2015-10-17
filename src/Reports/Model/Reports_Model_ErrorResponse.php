@@ -71,15 +71,15 @@ class Reports_Model_ErrorResponse extends Reports_Model
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:ErrorResponse');
         if ($response->length == 1) {
             return new Reports_Model_ErrorResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_ErrorResponse from provided XML. 
+            throw new \Exception ("Unable to construct MarketplaceWebService_Model_ErrorResponse from provided XML.
                                   Make sure that ErrorResponse is a root element");
         }
           

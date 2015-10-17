@@ -73,8 +73,8 @@
  * Setup request parameters and uncomment invoke to try out
  * sample for Get Service Status Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MWSCartService_Model_GetServiceStatus
- $request = new MWSCartService_Model_GetServiceStatusRequest();
+ // @TODO: set request. Action can be passed as Cart_Model_GetServiceStatus
+ $request = new Cart_Model_GetServiceStatusRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetServiceStatus($service, $request);
@@ -85,7 +85,7 @@
   * the MarketplaceId and ASIN.
   *
   * @param MWSCartService_Interface $service instance of MWSCartService_Interface
-  * @param mixed $request MWSCartService_Model_GetServiceStatus or array of parameters
+  * @param mixed $request Cart_Model_GetServiceStatus or array of parameters
   */
 
   function invokeGetServiceStatus(MWSCartService_Interface $service, $request)
@@ -96,7 +96,7 @@
         echo ("Service Response\n");
         echo ("=============================================================================\n");
 
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($response->toXML());
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;

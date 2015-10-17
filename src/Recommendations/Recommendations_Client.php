@@ -66,7 +66,7 @@ class Recommendations_Client implements Recommendations_Interface
      */
     public function getLastUpdatedTimeForRecommendations($request)
     {
-        if (!($request instanceof MWSRecommendations_Model_GetLastUpdatedTimeForRecommendationsRequest)) {
+        if (!($request instanceof Model\MWSRecommendations_Model_GetLastUpdatedTimeForRecommendationsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsRequest.php');
             $request = new MWSRecommendations_Model_GetLastUpdatedTimeForRecommendationsRequest($request);
         }
@@ -75,7 +75,7 @@ class Recommendations_Client implements Recommendations_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsResponse.php');
-        $response = MWSRecommendations_Model_GetLastUpdatedTimeForRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSRecommendations_Model_GetLastUpdatedTimeForRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -114,7 +114,7 @@ class Recommendations_Client implements Recommendations_Interface
      */
     public function listRecommendations($request)
     {
-        if (!($request instanceof MWSRecommendations_Model_ListRecommendationsRequest)) {
+        if (!($request instanceof Model\MWSRecommendations_Model_ListRecommendationsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListRecommendationsRequest.php');
             $request = new MWSRecommendations_Model_ListRecommendationsRequest($request);
         }
@@ -123,7 +123,7 @@ class Recommendations_Client implements Recommendations_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListRecommendationsResponse.php');
-        $response = MWSRecommendations_Model_ListRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSRecommendations_Model_ListRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -168,7 +168,7 @@ class Recommendations_Client implements Recommendations_Interface
      */
     public function listRecommendationsByNextToken($request)
     {
-        if (!($request instanceof MWSRecommendations_Model_ListRecommendationsByNextTokenRequest)) {
+        if (!($request instanceof Model\MWSRecommendations_Model_ListRecommendationsByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenRequest.php');
             $request = new MWSRecommendations_Model_ListRecommendationsByNextTokenRequest($request);
         }
@@ -177,7 +177,7 @@ class Recommendations_Client implements Recommendations_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenResponse.php');
-        $response = MWSRecommendations_Model_ListRecommendationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSRecommendations_Model_ListRecommendationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -216,7 +216,7 @@ class Recommendations_Client implements Recommendations_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSRecommendations_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MWSRecommendations_Model_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MWSRecommendations_Model_GetServiceStatusRequest($request);
         }
@@ -225,7 +225,7 @@ class Recommendations_Client implements Recommendations_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSRecommendations_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MWSRecommendations_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -744,7 +744,7 @@ class Recommendations_Client implements Recommendations_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -787,7 +787,7 @@ class Recommendations_Client implements Recommendations_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

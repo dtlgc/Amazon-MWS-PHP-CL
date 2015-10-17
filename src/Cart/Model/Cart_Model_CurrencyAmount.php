@@ -27,7 +27,7 @@ use Amazon\MWS\Cart\Cart_Model;
 
 
 /**
- * MWSCartService_Model_CurrencyAmount
+ * Cart_Model_CurrencyAmount
  * 
  * Properties:
  * <ul>

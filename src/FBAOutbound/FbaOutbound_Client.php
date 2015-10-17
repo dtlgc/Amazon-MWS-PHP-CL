@@ -68,7 +68,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function cancelFulfillmentOrder($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_CancelFulfillmentOrderRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_CancelFulfillmentOrderRequest)) {
             //require_once (dirname(__FILE__) . '/Model/CancelFulfillmentOrderRequest.php');
             $request = new MwsFbaOutboundServiceModel_CancelFulfillmentOrderRequest($request);
         }
@@ -77,7 +77,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/CancelFulfillmentOrderResponse.php');
-        $response = MwsFbaOutboundServiceModel_CancelFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_CancelFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -168,7 +168,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function createFulfillmentOrder($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_CreateFulfillmentOrderRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_CreateFulfillmentOrderRequest)) {
             //require_once (dirname(__FILE__) . '/Model/CreateFulfillmentOrderRequest.php');
             $request = new MwsFbaOutboundServiceModel_CreateFulfillmentOrderRequest($request);
         }
@@ -177,7 +177,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/CreateFulfillmentOrderResponse.php');
-        $response = MwsFbaOutboundServiceModel_CreateFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_CreateFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -276,7 +276,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function getFulfillmentOrder($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_GetFulfillmentOrderRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_GetFulfillmentOrderRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetFulfillmentOrderRequest.php');
             $request = new MwsFbaOutboundServiceModel_GetFulfillmentOrderRequest($request);
         }
@@ -285,7 +285,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetFulfillmentOrderResponse.php');
-        $response = MwsFbaOutboundServiceModel_GetFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_GetFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -336,7 +336,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function getFulfillmentPreview($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_GetFulfillmentPreviewRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_GetFulfillmentPreviewRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetFulfillmentPreviewRequest.php');
             $request = new MwsFbaOutboundServiceModel_GetFulfillmentPreviewRequest($request);
         }
@@ -345,7 +345,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetFulfillmentPreviewResponse.php');
-        $response = MwsFbaOutboundServiceModel_GetFulfillmentPreviewResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_GetFulfillmentPreviewResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -408,7 +408,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function getPackageTrackingDetails($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_GetPackageTrackingDetailsRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_GetPackageTrackingDetailsRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetPackageTrackingDetailsRequest.php');
             $request = new MwsFbaOutboundServiceModel_GetPackageTrackingDetailsRequest($request);
         }
@@ -417,7 +417,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetPackageTrackingDetailsResponse.php');
-        $response = MwsFbaOutboundServiceModel_GetPackageTrackingDetailsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_GetPackageTrackingDetailsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -459,7 +459,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_GetServiceStatusRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_GetServiceStatusRequest)) {
             //require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MwsFbaOutboundServiceModel_GetServiceStatusRequest($request);
         }
@@ -468,7 +468,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MwsFbaOutboundServiceModel_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -517,7 +517,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function listAllFulfillmentOrders($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersRequest.php');
             $request = new MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersRequest($request);
         }
@@ -526,7 +526,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersResponse.php');
-        $response = MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -578,7 +578,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function listAllFulfillmentOrdersByNextToken($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersByNextTokenRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersByNextTokenRequest)) {
             //require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersByNextTokenRequest.php');
             $request = new MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersByNextTokenRequest($request);
         }
@@ -587,7 +587,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersByNextTokenResponse.php');
-        $response = MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_ListAllFulfillmentOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -672,7 +672,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
      */
     public function updateFulfillmentOrder($request)
     {
-        if (!($request instanceof MwsFbaOutboundServiceModel_UpdateFulfillmentOrderRequest)) {
+        if (!($request instanceof Model\MwsFbaOutboundServiceModel_UpdateFulfillmentOrderRequest)) {
             //require_once (dirname(__FILE__) . '/Model/UpdateFulfillmentOrderRequest.php');
             $request = new MwsFbaOutboundServiceModel_UpdateFulfillmentOrderRequest($request);
         }
@@ -681,7 +681,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         $httpResponse = $this->_invoke($parameters);
 
         //require_once (dirname(__FILE__) . '/Model/UpdateFulfillmentOrderResponse.php');
-        $response = MwsFbaOutboundServiceModel_UpdateFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
+        $response = Model\MwsFbaOutboundServiceModel_UpdateFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -1249,7 +1249,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -1292,7 +1292,7 @@ class FbaOutbound_Client implements FbaOutbound_Interface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)
