@@ -34,11 +34,11 @@ use Amazon\MWS\Reports\Reports_Model;
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>MaxCount: int</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+ * <li>ReportTypeList: Reports_Model_TypeList</li>
  * <li>Acknowledged: bool</li>
  * <li>AvailableFromDate: string</li>
  * <li>AvailableToDate: string</li>
- * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>ReportRequestIdList: Reports_Model_IdList</li>
  *
  * </ul>
  */ 
@@ -61,7 +61,7 @@ class Reports_Model_GetReportListRequest extends Reports_Model
      * <li>Acknowledged: bool</li>
      * <li>AvailableFromDate: string</li>
      * <li>AvailableToDate: string</li>
-     * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>ReportRequestIdList: Reports_Model_IdList</li>
      *
      * </ul>
      */
@@ -72,11 +72,11 @@ class Reports_Model_GetReportListRequest extends Reports_Model
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'Reports_Model_TypeList'),
         'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         'AvailableFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'AvailableToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'Reports_Model_IdList'),
         );
         parent::__construct($data);
     }
@@ -264,7 +264,7 @@ class Reports_Model_GetReportListRequest extends Reports_Model
     /**
      * Gets the value of the ReportTypeList.
      * 
-     * @return TypeList ReportTypeList
+     * @return Reports_Model_TypeList ReportTypeList
      */
     public function getReportTypeList() 
     {
@@ -274,7 +274,7 @@ class Reports_Model_GetReportListRequest extends Reports_Model
     /**
      * Sets the value of the ReportTypeList.
      * 
-     * @param TypeList ReportTypeList
+     * @param Reports_Model_TypeList $value
      * @return void
      */
     public function setReportTypeList($value) 
@@ -286,7 +286,7 @@ class Reports_Model_GetReportListRequest extends Reports_Model
     /**
      * Sets the value of the ReportTypeList  and returns this instance
      * 
-     * @param TypeList $value ReportTypeList
+     * @param Reports_Model_TypeList $value ReportTypeList
      * @return Reports_Model_GetReportListRequest instance
      */
     public function withReportTypeList($value)
