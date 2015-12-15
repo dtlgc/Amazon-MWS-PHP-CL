@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Feed Submission Result Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetFeedSubmissionResultRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultRequest
  // object or array of parameters
  
 //$parameters = array (
@@ -98,9 +98,9 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_GetFeedSubmissionResultRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_GetFeedSubmissionResultRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setFeedSubmissionId('<Feed Submission Id>');
 //$request->setFeedSubmissionResult(@fopen('php://memory', 'rw+'));
@@ -113,7 +113,7 @@ $config = array (
   * retrieves the feed processing report
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetFeedSubmissionResult or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResult or array of parameters
   */
   function invokeGetFeedSubmissionResult(MarketplaceWebService_Interface $service, $request) 
   {

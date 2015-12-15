@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_ManageReportScheduleRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest
  * 
  * Properties:
  * <ul>
@@ -44,7 +44,7 @@ class Reports_Model_ManageReportScheduleRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ManageReportScheduleRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

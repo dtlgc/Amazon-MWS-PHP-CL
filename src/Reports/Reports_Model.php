@@ -195,8 +195,8 @@ abstract class Reports_Model
                     if ($element->length == 1) {
                     	switch($this->fields[$fieldName]['FieldType']) {
                     		case 'DateTime':
-                    			$data = new DateTime($element->item(0)->data, 
-                    				new DateTimeZone('UTC'));
+                    			$data = new \DateTime($element->item(0)->data,
+                    				new \DateTimeZone('UTC'));
                     			break;
                     		case 'bool':
                     			$value = $element->item(0)->data;
@@ -275,7 +275,7 @@ abstract class Reports_Model
      */
     private function isComplexType ($fieldType) 
     {
-        return preg_match('/^MarketplaceWebService_Model_/', $fieldType);
+        return preg_match('/^\\\\Amazon\\\\MWS\\\\Reports\\\\Model\\\\Reports_Model_/', $fieldType);
     }
 
    /**

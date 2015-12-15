@@ -26,43 +26,43 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetFeedSubmissionListResult: MarketplaceWebService_Model_GetFeedSubmissionListResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetFeedSubmissionListResult: \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */
 class Reports_Model_GetFeedSubmissionListResponse extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetFeedSubmissionListResult: MarketplaceWebService_Model_GetFeedSubmissionListResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetFeedSubmissionListResult: \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionListResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetFeedSubmissionListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetFeedSubmissionListResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetFeedSubmissionListResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return MaReports_Model_GetFeedSubmissionListResponse     */
@@ -76,7 +76,7 @@ class Reports_Model_GetFeedSubmissionListResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_GetFeedSubmissionListResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionListResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResponse from provided XML.
                                   Make sure that GetFeedSubmissionListResponse is a root element");
         }
           

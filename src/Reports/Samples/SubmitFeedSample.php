@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Submit Feed Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_SubmitFeedRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest
  // object or array of parameters
 
 // Note that PHP memory streams have a default limit of 2M before switching to disk. While you
@@ -149,7 +149,7 @@ EOD;
 
 //rewind($feedHandle);
 
-//$request = new MarketplaceWebService_Model_SubmitFeedRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest($parameters);
 /********* End Comment Block *********/
 
 /********* Begin Comment Block *********/
@@ -157,7 +157,7 @@ EOD;
 //fwrite($feedHandle, $feed);
 //rewind($feedHandle);
 
-//$request = new MarketplaceWebService_Model_SubmitFeedRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setMarketplaceIdList($marketplaceIdArray);
 //$request->setFeedType('_POST_PRODUCT_DATA_');
@@ -183,7 +183,7 @@ EOD;
   * caution (the default is false).
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_SubmitFeed or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeed or array of parameters
   */
   function invokeSubmitFeed(MarketplaceWebService_Interface $service, $request) 
   {

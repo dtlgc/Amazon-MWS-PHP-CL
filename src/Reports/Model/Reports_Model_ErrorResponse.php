@@ -26,12 +26,12 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_ErrorResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_ErrorResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>Error: MarketplaceWebService_Model_Error</li>
+ * <li>Error: \Amazon\MWS\Reports\Model\Reports_Model_Error</li>
  * <li>RequestId: string</li>
  *
  * </ul>
@@ -41,14 +41,14 @@ class Reports_Model_ErrorResponse extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ErrorResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_ErrorResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>Error: MarketplaceWebService_Model_Error</li>
+     * <li>Error: \Amazon\MWS\Reports\Model\Reports_Model_Error</li>
      * <li>RequestId: string</li>
      *
      * </ul>
@@ -56,7 +56,7 @@ class Reports_Model_ErrorResponse extends Reports_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Error' => array('FieldValue' => array(), 'FieldType' => 'MarketplaceWebService_Model_Error'),
+        'Error' => array('FieldValue' => array(), 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_Error'),
         'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
@@ -64,7 +64,7 @@ class Reports_Model_ErrorResponse extends Reports_Model
 
        
     /**
-     * Construct MarketplaceWebService_Model_ErrorResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_ErrorResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return Reports_Model_ErrorResponse
@@ -79,7 +79,7 @@ class Reports_Model_ErrorResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_ErrorResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_ErrorResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_ErrorResponse from provided XML.
                                   Make sure that ErrorResponse is a root element");
         }
           

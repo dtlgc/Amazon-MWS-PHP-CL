@@ -26,13 +26,13 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_ManageReportScheduleResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>Count: int</li>
- * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+ * <li>ReportSchedule: \Amazon\MWS\Reports\Model\Reports_Model_ReportSchedule</li>
  *
  * </ul>
  */ 
@@ -41,7 +41,7 @@ class Reports_Model_ManageReportScheduleResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ManageReportScheduleResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +49,7 @@ class Reports_Model_ManageReportScheduleResult extends Reports_Model
      * <ul>
      * 
      * <li>Count: int</li>
-     * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+     * <li>ReportSchedule: \Amazon\MWS\Reports\Model\Reports_Model_ReportSchedule</li>
      *
      * </ul>
      */
@@ -57,7 +57,7 @@ class Reports_Model_ManageReportScheduleResult extends Reports_Model
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
+        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_ReportSchedule')),
         );
         parent::__construct($data);
     }

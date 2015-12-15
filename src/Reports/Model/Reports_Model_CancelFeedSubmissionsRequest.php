@@ -26,15 +26,15 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_CancelFeedSubmissionsRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>FeedSubmissionIdList: MarketplaceWebService_Model_IdList</li>
- * <li>FeedTypeList: MarketplaceWebService_Model_TypeList</li>
+ * <li>FeedSubmissionIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
+ * <li>FeedTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
  * <li>SubmittedFromDate: string</li>
  * <li>SubmittedToDate: string</li>
  *
@@ -43,7 +43,7 @@ use Amazon\MWS\Reports\Reports_Model;
 class Reports_Model_CancelFeedSubmissionsRequest extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_CancelFeedSubmissionsRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -52,8 +52,8 @@ class Reports_Model_CancelFeedSubmissionsRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>FeedSubmissionIdList: MarketplaceWebService_Model_IdList</li>
-     * <li>FeedTypeList: MarketplaceWebService_Model_TypeList</li>
+     * <li>FeedSubmissionIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
+     * <li>FeedTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
      * <li>SubmittedFromDate: string</li>
      * <li>SubmittedToDate: string</li>
      *
@@ -65,8 +65,8 @@ class Reports_Model_CancelFeedSubmissionsRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
+        'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_IdList'),
+        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_TypeList'),
         'SubmittedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'SubmittedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );

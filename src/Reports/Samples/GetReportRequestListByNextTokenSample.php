@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report List Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportListRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest
  // object or array of parameters
  
 // $nextToken = '<The NextToken returned by GetReportRequestList>';
@@ -98,9 +98,9 @@ $config = array (
 //   'NextToken' => $nextToken,
 //   'MWSAuthToken' => '<MWS Auth Token>', // Optional
 // );
-// $request = new MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest($parameters);
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenRequest($parameters);
  
-// $request = new MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest();
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenRequest();
 // $request->setMerchant(MERCHANT_ID);
 // $request->setNextToken($nextToken);
 // $request->setMWSAuthToken('<MWS Auth Token>'); // Optional
@@ -114,7 +114,7 @@ $config = array (
   * regardless of their acknowledgement status
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenRequest or array of parameters
   */
   function invokeGetReportRequestListByNextToken(MarketplaceWebService_Interface $service, $request) 
   {

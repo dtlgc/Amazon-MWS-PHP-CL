@@ -92,7 +92,7 @@ $config = array (
 // parameter to the RequestReportRequest object.
 $marketplaceIdArray = array("Id" => array('<Marketplace_Id_1>','<Marketplace_Id_2>'));
 
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_ReportRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_ReportRequest
  // object or array of parameters
  
 // $parameters = array (
@@ -103,9 +103,9 @@ $marketplaceIdArray = array("Id" => array('<Marketplace_Id_1>','<Marketplace_Id_
 //   'MWSAuthToken' => '<MWS Auth Token>', // Optional
 // );
  
-// $request = new MarketplaceWebService_Model_RequestReportRequest($parameters);
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest($parameters);
  
-// $request = new MarketplaceWebService_Model_RequestReportRequest();
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest();
 // $request->setMarketplaceIdList($marketplaceIdArray);
 // $request->setMerchant(MERCHANT_ID);
 // $request->setReportType('_GET_MERCHANT_LISTINGS_DATA_');
@@ -122,7 +122,7 @@ $marketplaceIdArray = array("Id" => array('<Marketplace_Id_1>','<Marketplace_Id_
   * regardless of their acknowledgement status
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportList or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportList or array of parameters
   */
   function invokeRequestReport(MarketplaceWebService_Interface $service, $request) 
   {

@@ -26,21 +26,21 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+ * <li>FeedSubmissionInfo: \Amazon\MWS\Reports\Model\Reports_Model_FeedSubmissionInfo</li>
  *
  * </ul>
  */ 
 class Reports_Model_GetFeedSubmissionListByNextTokenResult extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +49,7 @@ class Reports_Model_GetFeedSubmissionListByNextTokenResult extends Reports_Model
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+     * <li>FeedSubmissionInfo: \Amazon\MWS\Reports\Model\Reports_Model_FeedSubmissionInfo</li>
      *
      * </ul>
      */
@@ -58,7 +58,7 @@ class Reports_Model_GetFeedSubmissionListByNextTokenResult extends Reports_Model
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_FeedSubmissionInfo')),
+        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }

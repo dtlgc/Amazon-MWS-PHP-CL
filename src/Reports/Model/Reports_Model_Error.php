@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_Error
+ * \Amazon\MWS\Reports\Model\Reports_Model_Error
  * 
  * Properties:
  * <ul>
@@ -34,7 +34,7 @@ use Amazon\MWS\Reports\Reports_Model;
  * <li>Type: string</li>
  * <li>Code: string</li>
  * <li>Message: string</li>
- * <li>Detail: MarketplaceWebService_Model_Object</li>
+ * <li>Detail: \Amazon\MWS\Reports\Model\Reports_Model_Object</li>
  *
  * </ul>
  */ 
@@ -43,7 +43,7 @@ class Reports_Model_Error extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_Error
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_Error
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -53,7 +53,7 @@ class Reports_Model_Error extends Reports_Model
      * <li>Type: string</li>
      * <li>Code: string</li>
      * <li>Message: string</li>
-     * <li>Detail: MarketplaceWebService_Model_Object</li>
+     * <li>Detail: \Amazon\MWS\Reports\Model\Reports_Model_Object</li>
      *
      * </ul>
      */

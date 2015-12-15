@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report Schedule Count Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportScheduleCountRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest
  // object or array of parameters
  
 //$parameters = array (
@@ -96,9 +96,9 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_GetReportScheduleCountRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest($parameters);
 //
-//$request = new MarketplaceWebService_Model_GetReportScheduleCountRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //     
@@ -110,7 +110,7 @@ $config = array (
   * returns the number of report schedules
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportScheduleCount or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCount or array of parameters
   */
   function invokeGetReportScheduleCount(MarketplaceWebService_Interface $service, $request) 
   {

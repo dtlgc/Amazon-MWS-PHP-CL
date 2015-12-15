@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report Schedule List Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportScheduleListRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListRequest
  // object or array of parameters
  
 //$parameters = array (
@@ -97,13 +97,13 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);     
 //
-//$request = new MarketplaceWebService_Model_GetReportScheduleListRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_GetReportScheduleListRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
-//$typeList = new MarketplaceWebService_Model_TypeList();
+//$typeList = new \Amazon\MWS\Reports\Model\Reports_Model_TypeList();
 //$request->setReportTypeList($typeList->withType('_GET_ORDERS_DATA_', '_GET_FLAT_FILE_ORDERS_DATA_'));
 //
 //invokeGetReportScheduleList($service, $request);
@@ -114,7 +114,7 @@ $config = array (
   * returns the list of report schedules
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportScheduleList or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleList or array of parameters
   */
   function invokeGetReportScheduleList(MarketplaceWebService_Interface $service, $request) 
   {

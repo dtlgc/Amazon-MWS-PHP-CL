@@ -26,12 +26,12 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_SubmitFeedResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResult
  * 
  * Properties:
  * <ul>
  * 
- * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+ * <li>FeedSubmissionInfo: \Amazon\MWS\Reports\Model\Reports_Model_FeedSubmissionInfo</li>
  *
  * </ul>
  */ 
@@ -40,21 +40,21 @@ class Reports_Model_SubmitFeedResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+     * <li>FeedSubmissionInfo: \Amazon\MWS\Reports\Model\Reports_Model_FeedSubmissionInfo</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_FeedSubmissionInfo'),
+        'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_FeedSubmissionInfo'),
         );
         parent::__construct($data);
     }

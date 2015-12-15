@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenRequest
  * 
  * Properties:
  * <ul>
@@ -42,7 +42,7 @@ class Reports_Model_GetFeedSubmissionListByNextTokenRequest extends Reports_Mode
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

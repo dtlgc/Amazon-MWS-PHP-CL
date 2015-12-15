@@ -87,7 +87,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Feed Submission Count Action
  ***********************************************************************/
-// @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetFeedSubmissionCountRequest
+// @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest
 
 //$parameters = array (
 //  'Merchant' => MERCHANT_ID,
@@ -95,10 +95,10 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_GetFeedSubmissionCountRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest($parameters);
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
      
-$request = new MarketplaceWebService_Model_GetFeedSubmissionCountRequest();
+$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest();
 $request->setMerchant(MERCHANT_ID);
                                        
 // object or array of parameters
@@ -109,7 +109,7 @@ invokeGetFeedSubmissionCount($service, $request);
   * returns the number of feeds matching all of the specified criteria
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetFeedSubmissionCount or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCount or array of parameters
   */
 function invokeGetFeedSubmissionCount(MarketplaceWebService_Interface $service, $request)  {
       try {

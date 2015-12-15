@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report Count Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportRequestCountRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest
  // object or array of parameters
 
 //$parameters = array (
@@ -97,13 +97,13 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_GetReportRequestCountRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_GetReportRequestCountRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
-//$statusList = new MarketplaceWebService_Model_StatusList();
+//$statusList = new \Amazon\MWS\Reports\Model\Reports_Model_StatusList();
 //$request->setReportProcessingStatusList($statusList->withStatus('_SUBMITTED_', '_DONE_'));
 //     
 //invokeGetReportRequestCount($service, $request);
@@ -116,7 +116,7 @@ $config = array (
   * regardless of acknowledgement status
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportRequestCount or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCount or array of parameters
   */
   function invokeGetReportRequestCount(MarketplaceWebService_Interface $service, $request) 
   {

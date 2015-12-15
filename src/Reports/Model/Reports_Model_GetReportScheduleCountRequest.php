@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleCountRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+ * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
  *
  * </ul>
  */ 
@@ -42,7 +42,7 @@ class Reports_Model_GetReportScheduleCountRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleCountRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -51,7 +51,7 @@ class Reports_Model_GetReportScheduleCountRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+     * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
      *
      * </ul>
      */
@@ -61,7 +61,7 @@ class Reports_Model_GetReportScheduleCountRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_TypeList'),
         );
         parent::__construct($data);
     }

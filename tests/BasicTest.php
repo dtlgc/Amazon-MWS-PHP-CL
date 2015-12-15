@@ -17,7 +17,7 @@ class BasicTest extends PHPUnit_Framework_TestCase
 
 		$d = $c = $b = $a = 'asdasd';
 		$ar =[];
-		$cart = new Amazon\MWS\Cart\Cart_Client($a,$b,$c,$d);
+		$cart = new \Amazon\MWS\Cart\Cart_Client($a,$b,$c,$d);
 		$customer = new Amazon\MWS\Customer\Customer_Client($a,$b,$c,$d);
 		$fbai = new Amazon\MWS\FBAInbound\FbaInbound_Client($a,$b,$c,$d);
 		$fbav = new Amazon\MWS\FBAInventory\FbaInventory_Client($a,$b,$ar,$c,$d);

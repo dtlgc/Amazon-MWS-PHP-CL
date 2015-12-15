@@ -14,7 +14,7 @@ use Amazon\MWS\Reports\Reports_Model;
 /******************************************************************************* 
 
 /**
- * MarketplaceWebService_Model_ContentType
+ * \Amazon\MWS\Reports\Model\Reports_Model_ContentType
  *
  * Defines the content type, encoding and character set used to send
  * a feed to MWS

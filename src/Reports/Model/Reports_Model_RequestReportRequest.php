@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_RequestReportRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>MarketplaceIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>MarketplaceIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
  * <li>ReportType: string</li>
  * <li>StartDate: string</li>
  * <li>EndDate: string</li>
@@ -46,7 +46,7 @@ class Reports_Model_RequestReportRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_RequestReportRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -55,7 +55,7 @@ class Reports_Model_RequestReportRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>MarketplaceIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>MarketplaceIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
      * <li>ReportType: string</li>
      * <li>StartDate: string</li>
      * <li>EndDate: string</li>
@@ -69,7 +69,7 @@ class Reports_Model_RequestReportRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_IdList'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'EndDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),

@@ -26,43 +26,43 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestCountResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportRequestCountResult: MarketplaceWebService_Model_GetReportRequestCountResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportRequestCountResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */
 class Reports_Model_GetReportRequestCountResponse extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestCountResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportRequestCountResult: MarketplaceWebService_Model_GetReportRequestCountResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportRequestCountResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportRequestCountResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportRequestCountResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return MaReports_Model_GetReportRequestCountResponse     */
@@ -76,7 +76,7 @@ class Reports_Model_GetReportRequestCountResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_GetReportRequestCountResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetReportRequestCountResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResponse from provided XML.
                                   Make sure that GetReportRequestCountResponse is a root element");
         }
           

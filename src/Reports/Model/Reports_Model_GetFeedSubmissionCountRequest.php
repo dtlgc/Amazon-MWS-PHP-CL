@@ -26,15 +26,15 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionCountRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>FeedTypeList: MarketplaceWebService_Model_TypeList</li>
- * <li>FeedProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+ * <li>FeedTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
+ * <li>FeedProcessingStatusList: \Amazon\MWS\Reports\Model\Reports_Model_StatusList</li>
  * <li>SubmittedFromDate: string</li>
  * <li>SubmittedToDate: string</li>
  *
@@ -44,7 +44,7 @@ class Reports_Model_GetFeedSubmissionCountRequest extends Reports_Model
 {
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionCountRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -53,8 +53,8 @@ class Reports_Model_GetFeedSubmissionCountRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>FeedTypeList: MarketplaceWebService_Model_TypeList</li>
-     * <li>FeedProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+     * <li>FeedTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
+     * <li>FeedProcessingStatusList: \Amazon\MWS\Reports\Model\Reports_Model_StatusList</li>
      * <li>SubmittedFromDate: string</li>
      * <li>SubmittedToDate: string</li>
      *
@@ -66,8 +66,8 @@ class Reports_Model_GetFeedSubmissionCountRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
-        'FeedProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_StatusList'),
+        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_TypeList'),
+        'FeedProcessingStatusList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_StatusList'),
         'SubmittedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'SubmittedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );

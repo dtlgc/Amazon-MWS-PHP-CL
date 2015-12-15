@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleListByNextTokenResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+ * <li>ReportSchedule: \Amazon\MWS\Reports\Model\Reports_Model_ReportSchedule</li>
  *
  * </ul>
  */ 
@@ -42,7 +42,7 @@ class Reports_Model_GetReportScheduleListByNextTokenResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleListByNextTokenResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -51,7 +51,7 @@ class Reports_Model_GetReportScheduleListByNextTokenResult extends Reports_Model
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+     * <li>ReportSchedule: \Amazon\MWS\Reports\Model\Reports_Model_ReportSchedule</li>
      *
      * </ul>
      */
@@ -60,7 +60,7 @@ class Reports_Model_GetReportScheduleListByNextTokenResult extends Reports_Model
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
+        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_ReportSchedule')),
         );
         parent::__construct($data);
     }

@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_ReportRequestInfo
+ * \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo
  * 
  * Properties:
  * <ul>
@@ -45,7 +45,7 @@ class Reports_Model_ReportRequestInfo extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ReportRequestInfo
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

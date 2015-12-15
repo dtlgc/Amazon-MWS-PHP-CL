@@ -88,22 +88,22 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report List Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportListRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest
  // object or array of parameters
 // $parameters = array (
 //   'Merchant' => MERCHANT_ID,
-//   'AvailableToDate' => new DateTime('now', new DateTimeZone('UTC')),
-//   'AvailableFromDate' => new DateTime('-6 months', new DateTimeZone('UTC')),
+//   'AvailableToDate' => new \DateTime('now', new \DateTimeZone('UTC')),
+//   'AvailableFromDate' => new \DateTime('-6 months', new \DateTimeZone('UTC')),
 //   'Acknowledged' => false, 
 //   'MWSAuthToken' => '<MWS Auth Token>', // Optional
 // );
 // 
-// $request = new MarketplaceWebService_Model_GetReportListRequest($parameters);
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest($parameters);
  
-// $request = new MarketplaceWebService_Model_GetReportListRequest();
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest();
 // $request->setMerchant(MERCHANT_ID);
-// $request->setAvailableToDate(new DateTime('now', new DateTimeZone('UTC')));
-// $request->setAvailableFromDate(new DateTime('-3 months', new DateTimeZone('UTC')));
+// $request->setAvailableToDate(new \DateTime('now', new \DateTimeZone('UTC')));
+// $request->setAvailableFromDate(new \DateTime('-3 months', new \DateTimeZone('UTC')));
 // $request->setAcknowledged(false);
 // $request->setMWSAuthToken('<MWS Auth Token>'); // Optional
  
@@ -115,7 +115,7 @@ $config = array (
   * regardless of their acknowledgement status
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportList or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportList or array of parameters
   */
   function invokeGetReportList(MarketplaceWebService_Interface $service, $request) 
   {

@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest
  * 
  * Properties:
  * <ul>
@@ -41,7 +41,7 @@ class Reports_Model_GetReportScheduleListByNextTokenRequest extends Reports_Mode
 {
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

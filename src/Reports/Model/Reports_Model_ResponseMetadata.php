@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_ResponseMetadata
+ * \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata
  * 
  * Properties:
  * <ul>
@@ -40,7 +40,7 @@ class Reports_Model_ResponseMetadata extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ResponseMetadata
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

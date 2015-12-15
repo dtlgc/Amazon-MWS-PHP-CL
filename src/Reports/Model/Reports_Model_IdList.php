@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_IdList
+ * \Amazon\MWS\Reports\Model\Reports_Model_IdList
  * 
  * Properties:
  * <ul>
@@ -40,7 +40,7 @@ class Reports_Model_IdList extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_IdList
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_IdList
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

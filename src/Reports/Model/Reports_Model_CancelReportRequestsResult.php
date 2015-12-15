@@ -26,13 +26,13 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_CancelReportRequestsResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>Count: int</li>
- * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+ * <li>ReportRequestInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo</li>
  *
  * </ul>
  */ 
@@ -41,7 +41,7 @@ class Reports_Model_CancelReportRequestsResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_CancelReportRequestsResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +49,7 @@ class Reports_Model_CancelReportRequestsResult extends Reports_Model
      * <ul>
      * 
      * <li>Count: int</li>
-     * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+     * <li>ReportRequestInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo</li>
      *
      * </ul>
      */
@@ -57,7 +57,7 @@ class Reports_Model_CancelReportRequestsResult extends Reports_Model
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportRequestInfo')),
+        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo')),
         );
         parent::__construct($data);
     }

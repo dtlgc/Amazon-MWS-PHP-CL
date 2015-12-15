@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report Schedule List By Next Token Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest
  // object or array of parameters
 
 //$parameters = array (
@@ -97,9 +97,9 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest($parameters);
 //
-//$request = new MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setNextToken('<Next Token Returned by GetReportScheduleList>');
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
@@ -112,7 +112,7 @@ $config = array (
   * retrieve the next batch of list items and if there are more items to retrieve
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportScheduleListByNextToken or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextToken or array of parameters
   */
   function invokeGetReportScheduleListByNextToken(MarketplaceWebService_Interface $service, $request) 
   {

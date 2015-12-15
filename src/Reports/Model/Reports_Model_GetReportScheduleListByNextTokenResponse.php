@@ -26,43 +26,43 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportScheduleListByNextTokenResult: MarketplaceWebService_Model_GetReportScheduleListByNextTokenResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportScheduleListByNextTokenResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */
 class Reports_Model_GetReportScheduleListByNextTokenResponse extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportScheduleListByNextTokenResult: MarketplaceWebService_Model_GetReportScheduleListByNextTokenResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportScheduleListByNextTokenResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportScheduleListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportScheduleListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportScheduleListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return MaReports_Model_GetReportScheduleListByNextTokenResponse     */
@@ -76,7 +76,7 @@ class Reports_Model_GetReportScheduleListByNextTokenResponse extends Reports_Mod
         if ($response->length == 1) {
             return new Reports_Model_GetReportScheduleListByNextTokenResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResponse from provided XML.
                                   Make sure that GetReportScheduleListByNextTokenResponse is a root element");
         }
           

@@ -88,7 +88,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequest
  // object or array of parameters
 // $reportId = '<Your Report Id>';
  
@@ -98,9 +98,9 @@ $config = array (
 //   'ReportId' => $reportId,
 //   'MWSAuthToken' => '<MWS Auth Token>', // Optional
 // );
-// $request = new MarketplaceWebService_Model_GetReportRequest($parameters);
+// $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_GetReportRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setReport(@fopen('php://memory', 'rw+'));
 //$request->setReportId($reportId);
@@ -115,7 +115,7 @@ invokeGetReport($service, $request);
   * streaming fashion.
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReport or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReport or array of parameters
   */
   function invokeGetReport(MarketplaceWebService_Interface $service, $request) 
   {

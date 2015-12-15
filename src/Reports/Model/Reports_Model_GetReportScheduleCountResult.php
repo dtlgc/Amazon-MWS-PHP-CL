@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleCountResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountResult
  * 
  * Properties:
  * <ul>
@@ -40,7 +40,7 @@ class Reports_Model_GetReportScheduleCountResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleCountResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

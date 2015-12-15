@@ -26,13 +26,13 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportListByNextTokenResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportListByNextTokenResult: MarketplaceWebService_Model_GetReportListByNextTokenResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportListByNextTokenResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */ 
@@ -41,30 +41,30 @@ class Reports_Model_GetReportListByNextTokenResponse extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListByNextTokenResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportListByNextTokenResult: MarketplaceWebService_Model_GetReportListByNextTokenResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportListByNextTokenResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportListByNextTokenResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return Reports_Model_GetReportListByNextTokenResponse
@@ -79,7 +79,7 @@ class Reports_Model_GetReportListByNextTokenResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_GetReportListByNextTokenResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetReportListByNextTokenResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResponse from provided XML.
                                   Make sure that GetReportListByNextTokenResponse is a root element");
         }
           

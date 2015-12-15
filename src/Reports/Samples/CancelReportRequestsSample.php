@@ -87,7 +87,7 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Cancel Reports Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_CancelReportsRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_CancelReportsRequest
  // object or array of parameters
 
 // Request objects can be constructed with an array of parameters.
@@ -97,13 +97,13 @@ $config = array (
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_CancelReportRequestsRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_CancelReportRequestsRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
-//$idList = new MarketplaceWebService_Model_IdList();
+//$idList = new \Amazon\MWS\Reports\Model\Reports_Model_IdList();
 //$request->setReportRequestIdList($idList->withId('4309077944', '4309077934'));
 //
 //invokeCancelReportRequests($service, $request);
@@ -114,7 +114,7 @@ $config = array (
   * last 30 days that have not started processing
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_CancelFeedSubmissions or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissions or array of parameters
   */
   function invokeCancelReportRequests(MarketplaceWebService_Interface $service, $request) 
   {

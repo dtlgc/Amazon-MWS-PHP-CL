@@ -26,43 +26,43 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_SubmitFeedResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>SubmitFeedResult: MarketplaceWebService_Model_SubmitFeedResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>SubmitFeedResult: \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */
 class Reports_Model_SubmitFeedResponse extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>SubmitFeedResult: MarketplaceWebService_Model_SubmitFeedResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>SubmitFeedResult: \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_SubmitFeedResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_SubmitFeedResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return MaReports_Model_SubmitFeedResponse     */
@@ -76,7 +76,7 @@ class Reports_Model_SubmitFeedResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_SubmitFeedResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_SubmitFeedResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResponse from provided XML.
                                   Make sure that SubmitFeedResponse is a root element");
         }
           

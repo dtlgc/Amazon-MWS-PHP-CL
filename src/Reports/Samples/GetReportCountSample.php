@@ -88,22 +88,22 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Get Report Count Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_GetReportCountRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountRequest
  // object or array of parameters
 
 //$parameters = array (
 //  'Merchant' => MERCHANT_ID,
-//  'AvailableFromDate' => new DateTime('-6 months', new DateTimeZone('UTC')),
-//  'AvailableToDate' => new DateTime('-3 months', new DateTimeZone('UTC')),
+//  'AvailableFromDate' => new \DateTime('-6 months', new \DateTimeZone('UTC')),
+//  'AvailableToDate' => new \DateTime('-3 months', new \DateTimeZone('UTC')),
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_GetReportCountRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_GetReportCountRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountRequest();
 //$request->setMerchant(MERCHANT_ID);
-//$request->setAvailableFromDate(new DateTime('-6 months', new DateTimeZone('UTC')));
-//$request->setAvailableToDate(new DateTime('now', new DateTimeZone('UTC')));
+//$request->setAvailableFromDate(new \DateTime('-6 months', new \DateTimeZone('UTC')));
+//$request->setAvailableToDate(new \DateTime('now', new \DateTimeZone('UTC')));
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
 //invokeGetReportCount($service, $request);
@@ -116,7 +116,7 @@ $config = array (
   * regardless of acknowledgement status
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_GetReportCount or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_GetReportCount or array of parameters
   */
   function invokeGetReportCount(MarketplaceWebService_Interface $service, $request) 
   {

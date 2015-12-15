@@ -88,24 +88,24 @@ $config = array (
  * Setup request parameters and uncomment invoke to try out 
  * sample for Manage Report Schedule Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebService_Model_ManageReportScheduleRequest
+ // @TODO: set request. Action can be passed as \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest
  // object or array of parameters
 
 //$parameters = array (
 //  'Merchant' => MERCHANT_ID,
 //  'ReportType' => '_GET_ORDERS_DATA_',
 //  'Schedule' => '_1_HOUR_',
-//  'ScheduleDate' => new DateTime('now', new DateTimeZone('UTC')),
+//  'ScheduleDate' => new \DateTime('now', new \DateTimeZone('UTC')),
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
-//$request = new MarketplaceWebService_Model_ManageReportScheduleRequest($parameters);
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest($parameters);
 
-//$request = new MarketplaceWebService_Model_ManageReportScheduleRequest();
+//$request = new \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest();
 //$request->setMerchant(MERCHANT_ID);
 //$request->setReportType('_GET_ORDERS_DATA_');
 //$request->setSchedule('_1_HOUR_');
-//$request->setScheduleDate(new DateTime('now', new DateTimeZone('UTC')));
+//$request->setScheduleDate(new \DateTime('now', new \DateTimeZone('UTC')));
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
 //invokeManageReportSchedule($service, $request);
@@ -117,7 +117,7 @@ $config = array (
   * for a given report type, such as order reports in particular.
   *   
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
-  * @param mixed $request MarketplaceWebService_Model_ManageReportSchedule or array of parameters
+  * @param mixed $request \Amazon\MWS\Reports\Model\Reports_Model_ManageReportSchedule or array of parameters
   */
   function invokeManageReportSchedule(MarketplaceWebService_Interface $service, $request) 
   {

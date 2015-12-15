@@ -26,13 +26,13 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_CancelReportRequestsResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>CancelReportRequestsResult: MarketplaceWebService_Model_CancelReportRequestsResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>CancelReportRequestsResult: \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */ 
@@ -41,30 +41,30 @@ class Reports_Model_CancelReportRequestsResponse extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_CancelReportRequestsResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>CancelReportRequestsResult: MarketplaceWebService_Model_CancelReportRequestsResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>CancelReportRequestsResult: \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_CancelReportRequestsResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_CancelReportRequestsResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return Reports_Model_CancelReportRequestsResponse
@@ -79,7 +79,7 @@ class Reports_Model_CancelReportRequestsResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_CancelReportRequestsResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_CancelReportRequestsResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResponse from provided XML.
                                   Make sure that CancelReportRequestsResponse is a root element");
         }
           

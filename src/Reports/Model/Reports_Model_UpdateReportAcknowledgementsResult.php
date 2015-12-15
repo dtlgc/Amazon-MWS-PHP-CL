@@ -26,20 +26,20 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_UpdateReportAcknowledgementsResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>Count: int</li>
- * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+ * <li>ReportInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportInfo</li>
  *
  * </ul>
  */
 class Reports_Model_UpdateReportAcknowledgementsResult extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_UpdateReportAcknowledgementsResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -47,7 +47,7 @@ class Reports_Model_UpdateReportAcknowledgementsResult extends Reports_Model
      * <ul>
      * 
      * <li>Count: int</li>
-     * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+     * <li>ReportInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportInfo</li>
      *
      * </ul>
      */
@@ -55,7 +55,7 @@ class Reports_Model_UpdateReportAcknowledgementsResult extends Reports_Model
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
+        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_ReportInfo')),
         );
         parent::__construct($data);
     }

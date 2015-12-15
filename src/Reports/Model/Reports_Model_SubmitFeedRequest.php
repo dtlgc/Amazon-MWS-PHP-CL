@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_SubmitFeedRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>MarketplaceIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>MarketplaceIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
  * <li>FeedContent: string</li>
  * <li>FeedType: string</li>
  * <li>PurgeAndReplace: bool</li>
@@ -43,7 +43,7 @@ use Amazon\MWS\Reports\Reports_Model;
 class Reports_Model_SubmitFeedRequest extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -52,7 +52,7 @@ class Reports_Model_SubmitFeedRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>MarketplaceIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>MarketplaceIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
      * <li>FeedContent: string</li>
      * <li>FeedType: string</li>
      * <li>PurgeAndReplace: bool</li>
@@ -75,12 +75,12 @@ class Reports_Model_SubmitFeedRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_IdList'),
         'FeedContent' => array ('FieldValue' => null, 'FieldType' => 'string'),
         'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'PurgeAndReplace' => array('FieldValue' => null, 'FieldType' => 'bool'),
         'ContentMd5' => array ('FieldValue' => null, 'FieldType' => 'string'),
- 	'ContentType' => array ('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType')      
+ 	'ContentType' => array ('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ContentType')
         );
         
         parent::__construct($data);

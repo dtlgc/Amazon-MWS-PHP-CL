@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportListByNextTokenResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+ * <li>ReportInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportInfo</li>
  *
  * </ul>
  */ 
@@ -41,7 +41,7 @@ class Reports_Model_GetReportListByNextTokenResult extends Reports_Model
 {
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListByNextTokenResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -50,7 +50,7 @@ class Reports_Model_GetReportListByNextTokenResult extends Reports_Model
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+     * <li>ReportInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportInfo</li>
      *
      * </ul>
      */
@@ -59,7 +59,7 @@ class Reports_Model_GetReportListByNextTokenResult extends Reports_Model
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
+        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_ReportInfo')),
         );
         parent::__construct($data);
     }

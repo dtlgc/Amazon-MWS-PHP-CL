@@ -26,13 +26,13 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetFeedSubmissionListByNextTokenResult: MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetFeedSubmissionListByNextTokenResult: \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */ 
@@ -41,30 +41,30 @@ class Reports_Model_GetFeedSubmissionListByNextTokenResponse extends Reports_Mod
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetFeedSubmissionListByNextTokenResult: MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetFeedSubmissionListByNextTokenResult: \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return Reports_Model_GetFeedSubmissionListByNextTokenResponse
@@ -79,7 +79,7 @@ class Reports_Model_GetFeedSubmissionListByNextTokenResponse extends Reports_Mod
         if ($response->length == 1) {
             return new Reports_Model_GetFeedSubmissionListByNextTokenResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse from provided XML.
                                   Make sure that GetFeedSubmissionListByNextTokenResponse is a root element");
         }
           

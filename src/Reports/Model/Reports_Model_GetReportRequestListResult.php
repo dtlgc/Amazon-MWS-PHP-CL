@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestListResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+ * <li>ReportRequestInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo</li>
  *
  * </ul>
  */ 
@@ -42,7 +42,7 @@ class Reports_Model_GetReportRequestListResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestListResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -51,7 +51,7 @@ class Reports_Model_GetReportRequestListResult extends Reports_Model
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+     * <li>ReportRequestInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo</li>
      *
      * </ul>
      */
@@ -60,7 +60,7 @@ class Reports_Model_GetReportRequestListResult extends Reports_Model
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportRequestInfo')),
+        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('\Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo')),
         );
         parent::__construct($data);
     }

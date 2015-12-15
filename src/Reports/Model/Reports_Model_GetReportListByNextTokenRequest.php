@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportListByNextTokenRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenRequest
  * 
  * Properties:
  * <ul>
@@ -42,7 +42,7 @@ class Reports_Model_GetReportListByNextTokenRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListByNextTokenRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

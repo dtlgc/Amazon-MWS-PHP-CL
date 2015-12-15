@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportListRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest
  * 
  * Properties:
  * <ul>
@@ -47,7 +47,7 @@ class Reports_Model_GetReportListRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -57,7 +57,7 @@ class Reports_Model_GetReportListRequest extends Reports_Model
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>MaxCount: int</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+     * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
      * <li>Acknowledged: bool</li>
      * <li>AvailableFromDate: string</li>
      * <li>AvailableToDate: string</li>

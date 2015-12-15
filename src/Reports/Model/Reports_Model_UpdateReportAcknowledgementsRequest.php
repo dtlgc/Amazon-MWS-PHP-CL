@@ -26,14 +26,14 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>ReportIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
  * <li>Acknowledged: bool</li>
  *
  * </ul>
@@ -43,7 +43,7 @@ class Reports_Model_UpdateReportAcknowledgementsRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -52,7 +52,7 @@ class Reports_Model_UpdateReportAcknowledgementsRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>ReportIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
      * <li>Acknowledged: bool</li>
      *
      * </ul>
@@ -63,7 +63,7 @@ class Reports_Model_UpdateReportAcknowledgementsRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'ReportIdList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_IdList'),
         'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);

@@ -26,7 +26,7 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionCountResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountResult
  * 
  * Properties:
  * <ul>
@@ -40,7 +40,7 @@ class Reports_Model_GetFeedSubmissionCountResult extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionCountResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

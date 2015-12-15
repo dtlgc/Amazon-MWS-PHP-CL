@@ -26,13 +26,13 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportResponse
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportResult: MarketplaceWebService_Model_GetReportResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportResult</li>
+ * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
  *
  * </ul>
  */ 
@@ -41,30 +41,30 @@ class Reports_Model_GetReportResponse extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportResponse
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportResult: MarketplaceWebService_Model_GetReportResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportResult: \Amazon\MWS\Reports\Model\Reports_Model_GetReportResult</li>
+     * <li>ResponseMetadata: \Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportResult' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_GetReportResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportResponse from XML string
+     * Construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportResponse from XML string
      * 
      * @param string $xml XML string to construct from
      * @return Reports_Model_GetReportResponse
@@ -79,7 +79,7 @@ class Reports_Model_GetReportResponse extends Reports_Model
         if ($response->length == 1) {
             return new Reports_Model_GetReportResponse(($response->item(0)));
         } else {
-            throw new \Exception ("Unable to construct MarketplaceWebService_Model_GetReportResponse from provided XML.
+            throw new \Exception ("Unable to construct \Amazon\MWS\Reports\Model\Reports_Model_GetReportResponse from provided XML.
                                   Make sure that GetReportResponse is a root element");
         }
           

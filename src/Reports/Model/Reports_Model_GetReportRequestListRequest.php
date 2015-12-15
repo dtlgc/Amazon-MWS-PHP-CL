@@ -26,16 +26,16 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestListRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
- * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+ * <li>ReportRequestIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
+ * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
+ * <li>ReportProcessingStatusList: \Amazon\MWS\Reports\Model\Reports_Model_StatusList</li>
  * <li>MaxCount: Count</li>
  * <li>RequestedFromDate: string</li>
  * <li>RequestedToDate: string</li>
@@ -47,7 +47,7 @@ class Reports_Model_GetReportRequestListRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestListRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -56,9 +56,9 @@ class Reports_Model_GetReportRequestListRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
-     * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+     * <li>ReportRequestIdList: \Amazon\MWS\Reports\Model\Reports_Model_IdList</li>
+     * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
+     * <li>ReportProcessingStatusList: \Amazon\MWS\Reports\Model\Reports_Model_StatusList</li>
      * <li>MaxCount: Count</li>
      * <li>RequestedFromDate: string</li>
      * <li>RequestedToDate: string</li>
@@ -71,9 +71,9 @@ class Reports_Model_GetReportRequestListRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
-        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_StatusList'),
+        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_IdList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_TypeList'),
+        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_StatusList'),
         'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
         'RequestedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'RequestedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),

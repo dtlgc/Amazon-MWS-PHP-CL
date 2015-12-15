@@ -26,15 +26,15 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestCountRequest
+ * \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
- * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+ * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
+ * <li>ReportProcessingStatusList: \Amazon\MWS\Reports\Model\Reports_Model_StatusList</li>
  * <li>RequestedFromDate: string</li>
  * <li>RequestedToDate: string</li>
  *
@@ -45,7 +45,7 @@ class Reports_Model_GetReportRequestCountRequest extends Reports_Model
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestCountRequest
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -54,8 +54,8 @@ class Reports_Model_GetReportRequestCountRequest extends Reports_Model
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
-     * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+     * <li>ReportTypeList: \Amazon\MWS\Reports\Model\Reports_Model_TypeList</li>
+     * <li>ReportProcessingStatusList: \Amazon\MWS\Reports\Model\Reports_Model_StatusList</li>
      * <li>RequestedFromDate: string</li>
      * <li>RequestedToDate: string</li>
      *
@@ -67,8 +67,8 @@ class Reports_Model_GetReportRequestCountRequest extends Reports_Model
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
-        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_StatusList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_TypeList'),
+        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_StatusList'),
         'RequestedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'RequestedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );

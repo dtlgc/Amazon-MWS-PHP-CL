@@ -26,33 +26,33 @@ use Amazon\MWS\Reports\Reports_Model;
     
 
 /**
- * MarketplaceWebService_Model_RequestReportResult
+ * \Amazon\MWS\Reports\Model\Reports_Model_RequestReportResult
  * 
  * Properties:
  * <ul>
  * 
- * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+ * <li>ReportRequestInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo</li>
  *
  * </ul>
  */ 
 class Reports_Model_RequestReportResult extends Reports_Model
 {
     /**
-     * Construct new MarketplaceWebService_Model_RequestReportResult
+     * Construct new \Amazon\MWS\Reports\Model\Reports_Model_RequestReportResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+     * <li>ReportRequestInfo: \Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ReportRequestInfo'),
+        'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => '\Amazon\MWS\Reports\Model\Reports_Model_ReportRequestInfo'),
         );
         parent::__construct($data);
     }

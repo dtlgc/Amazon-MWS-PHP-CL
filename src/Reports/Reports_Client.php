@@ -253,23 +253,23 @@ class Reports_Client implements Reports_Interface
    * streaming fashion.
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReport.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportRequest request
-   * or MarketplaceWebService_Model_GetReportRequest object itself
-   * @see MarketplaceWebService_Model_GetReport
-   * @return MarketplaceWebService_Model_GetReportResponse MarketplaceWebService_Model_GetReportResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReport
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportResponse
    *
    * @throws Reports_Exception
    */
   public function getReport($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportResponse.php');
 
     $httpResponse = $this->invoke($this->convertGetReport($request), $request->getReport());
-    $response = Model\MarketplaceWebService_Model_GetReportResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -279,22 +279,22 @@ class Reports_Client implements Reports_Interface
    * returns the number of report schedules
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportScheduleCount.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportScheduleCountRequest request
-   * or MarketplaceWebService_Model_GetReportScheduleCountRequest object itself
-   * @see MarketplaceWebService_Model_GetReportScheduleCount
-   * @return MarketplaceWebService_Model_GetReportScheduleCountResponse MarketplaceWebService_Model_GetReportScheduleCountResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCount
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountResponse
    *
    * @throws Reports_Exception
    */
   public function getReportScheduleCount($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportScheduleCountRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportScheduleCountRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportScheduleCountRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportScheduleCountRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleCountRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportScheduleCountResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportScheduleCount($request));
-    $response = Model\MarketplaceWebService_Model_GetReportScheduleCountResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportScheduleCountResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -304,22 +304,22 @@ class Reports_Client implements Reports_Interface
    * retrieve the next batch of list items and if there are more items to retrieve
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportRequestListByNextToken.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest request
-   * or MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest object itself
-   * @see MarketplaceWebService_Model_GetReportRequestListByNextToken
-   * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextToken
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenResponse
    *
    * @throws Reports_Exception
    */
   public function getReportRequestListByNextToken($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportRequestListByNextTokenRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportRequestListByNextTokenRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListByNextTokenRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportRequestListByNextTokenResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportRequestListByNextToken($request));
-    $response = Model\MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportRequestListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -329,22 +329,22 @@ class Reports_Client implements Reports_Interface
    * The UpdateReportAcknowledgements operation updates the acknowledged status of one or more reports.
    *
    * @see http://docs.amazonwebservices.com/${docPath}UpdateReportAcknowledgements.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest request
-   * or MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest object itself
-   * @see MarketplaceWebService_Model_UpdateReportAcknowledgements
-   * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgements
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsResponse \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsResponse
    *
    * @throws Reports_Exception
    */
   public function updateReportAcknowledgements($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest) {
+    if (!$request instanceof Model\Reports_Model_UpdateReportAcknowledgementsRequest) {
       //require_once ('MarketplaceWebService/Model/UpdateReportAcknowledgementsRequest.php');
-      $request = new MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_UpdateReportAcknowledgementsRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/UpdateReportAcknowledgementsResponse.php');
     $httpResponse = $this->invoke($this->convertUpdateReportAcknowledgements($request));
-    $response = Model\MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_UpdateReportAcknowledgementsResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -358,22 +358,22 @@ class Reports_Client implements Reports_Interface
    * caution (the default is false).
    *
    * @see http://docs.amazonwebservices.com/${docPath}SubmitFeed.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_SubmitFeedRequest request
-   * or MarketplaceWebService_Model_SubmitFeedRequest object itself
-   * @see MarketplaceWebService_Model_SubmitFeed
-   * @return MarketplaceWebService_Model_SubmitFeedResponse MarketplaceWebService_Model_SubmitFeedResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeed
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResponse \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedResponse
    *
    * @throws Reports_Exception
    */
   public function submitFeed($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_SubmitFeedRequest) {
+    if (!$request instanceof Model\Reports_Model_SubmitFeedRequest) {
       //require_once ('MarketplaceWebService/Model/SubmitFeedRequest.php');
-      $request = new MarketplaceWebService_Model_SubmitFeedRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_SubmitFeedRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/SubmitFeedResponse.php');
     $httpResponse = $this->invoke($this->convertSubmitFeed($request), $request->getFeedContent(), $request->getContentMd5());
-    $response = Model\MarketplaceWebService_Model_SubmitFeedResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_SubmitFeedResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -385,22 +385,22 @@ class Reports_Client implements Reports_Interface
    * regardless of acknowledgement status
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportCount.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportCountRequest request
-   * or MarketplaceWebService_Model_GetReportCountRequest object itself
-   * @see MarketplaceWebService_Model_GetReportCount
-   * @return MarketplaceWebService_Model_GetReportCountResponse MarketplaceWebService_Model_GetReportCountResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportCount
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountResponse
    *
    * @throws Reports_Exception
    */
   public function getReportCount($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportCountRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportCountRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportCountRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportCountRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportCountRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportCountResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportCount($request));
-    $response = Model\MarketplaceWebService_Model_GetReportCountResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportCountResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -410,22 +410,22 @@ class Reports_Client implements Reports_Interface
    * retrieve the next batch of list items and if there are more items to retrieve
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionListByNextToken.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest request
-   * or MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest object itself
-   * @see MarketplaceWebService_Model_GetFeedSubmissionListByNextToken
-   * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextToken
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse
    *
    * @throws Reports_Exception
    */
   public function getFeedSubmissionListByNextToken($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest) {
+    if (!$request instanceof Model\Reports_Model_GetFeedSubmissionListByNextTokenRequest) {
       //require_once ('MarketplaceWebService/Model/GetFeedSubmissionListByNextTokenRequest.php');
-      $request = new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListByNextTokenRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetFeedSubmissionListByNextTokenResponse.php');
     $httpResponse = $this->invoke($this->convertGetFeedSubmissionListByNextToken($request));
-    $response = Model\MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetFeedSubmissionListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -436,22 +436,22 @@ class Reports_Client implements Reports_Interface
    * last 30 days that have not started processing
    *
    * @see http://docs.amazonwebservices.com/${docPath}CancelFeedSubmissions.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_CancelFeedSubmissionsRequest request
-   * or MarketplaceWebService_Model_CancelFeedSubmissionsRequest object itself
-   * @see MarketplaceWebService_Model_CancelFeedSubmissions
-   * @return MarketplaceWebService_Model_CancelFeedSubmissionsResponse MarketplaceWebService_Model_CancelFeedSubmissionsResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissions
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsResponse \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsResponse
    *
    * @throws Reports_Exception
    */
   public function cancelFeedSubmissions($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_CancelFeedSubmissionsRequest) {
+    if (!$request instanceof Model\Reports_Model_CancelFeedSubmissionsRequest) {
       //require_once ('MarketplaceWebService/Model/CancelFeedSubmissionsRequest.php');
-      $request = new MarketplaceWebService_Model_CancelFeedSubmissionsRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_CancelFeedSubmissionsRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/CancelFeedSubmissionsResponse.php');
     $httpResponse = $this->invoke($this->convertCancelFeedSubmissions($request));
-    $response = Model\MarketplaceWebService_Model_CancelFeedSubmissionsResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_CancelFeedSubmissionsResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -461,22 +461,22 @@ class Reports_Client implements Reports_Interface
    * requests the generation of a report
    *
    * @see http://docs.amazonwebservices.com/${docPath}RequestReport.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_RequestReportRequest request
-   * or MarketplaceWebService_Model_RequestReportRequest object itself
-   * @see MarketplaceWebService_Model_RequestReport
-   * @return MarketplaceWebService_Model_RequestReportResponse MarketplaceWebService_Model_RequestReportResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_RequestReport
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_RequestReportResponse \Amazon\MWS\Reports\Model\Reports_Model_RequestReportResponse
    *
    * @throws Reports_Exception
    */
   public function requestReport($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_RequestReportRequest) {
+    if (!$request instanceof Model\Reports_Model_RequestReportRequest) {
       //require_once ('MarketplaceWebService/Model/RequestReportRequest.php');
-      $request = new MarketplaceWebService_Model_RequestReportRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_RequestReportRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/RequestReportResponse.php');
     $httpResponse = $this->invoke($this->convertRequestReport($request));
-    $response = Model\MarketplaceWebService_Model_RequestReportResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_RequestReportResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -486,22 +486,22 @@ class Reports_Client implements Reports_Interface
    * returns the number of feeds matching all of the specified criteria
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionCount.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetFeedSubmissionCountRequest request
-   * or MarketplaceWebService_Model_GetFeedSubmissionCountRequest object itself
-   * @see MarketplaceWebService_Model_GetFeedSubmissionCount
-   * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse MarketplaceWebService_Model_GetFeedSubmissionCountResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCount
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountResponse \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountResponse
    *
    * @throws Reports_Exception
    */
   public function getFeedSubmissionCount($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetFeedSubmissionCountRequest) {
+    if (!$request instanceof Model\Reports_Model_GetFeedSubmissionCountRequest) {
       //require_once ('MarketplaceWebService/Model/GetFeedSubmissionCountRequest.php');
-      $request = new MarketplaceWebService_Model_GetFeedSubmissionCountRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionCountRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetFeedSubmissionCountResponse.php');
     $httpResponse = $this->invoke($this->convertGetFeedSubmissionCount($request));
-    $response = Model\MarketplaceWebService_Model_GetFeedSubmissionCountResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetFeedSubmissionCountResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -512,22 +512,22 @@ class Reports_Client implements Reports_Interface
    * by default all those within the last 90 days
    *
    * @see http://docs.amazonwebservices.com/${docPath}CancelReportRequests.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_CancelReportRequestsRequest request
-   * or MarketplaceWebService_Model_CancelReportRequestsRequest object itself
-   * @see MarketplaceWebService_Model_CancelReportRequests
-   * @return MarketplaceWebService_Model_CancelReportRequestsResponse MarketplaceWebService_Model_CancelReportRequestsResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequests
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResponse \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsResponse
    *
    * @throws Reports_Exception
    */
   public function cancelReportRequests($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_CancelReportRequestsRequest) {
+    if (!$request instanceof Model\Reports_Model_CancelReportRequestsRequest) {
       //require_once ('MarketplaceWebService/Model/CancelReportRequestsRequest.php');
-      $request = new MarketplaceWebService_Model_CancelReportRequestsRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_CancelReportRequestsRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/CancelReportRequestsResponse.php');
     $httpResponse = $this->invoke($this->convertCancelReportRequests($request));
-    $response = Model\MarketplaceWebService_Model_CancelReportRequestsResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_CancelReportRequestsResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -538,22 +538,22 @@ class Reports_Client implements Reports_Interface
    * regardless of their acknowledgement status
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportList.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportListRequest request
-   * or MarketplaceWebService_Model_GetReportListRequest object itself
-   * @see MarketplaceWebService_Model_GetReportList
-   * @return MarketplaceWebService_Model_GetReportListResponse MarketplaceWebService_Model_GetReportListResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportList
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportListResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportListResponse
    *
    * @throws Reports_Exception
    */
   public function getReportList($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportListRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportListRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportListRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportListRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportListResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportList($request));
-    $response = Model\MarketplaceWebService_Model_GetReportListResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportListResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -563,22 +563,22 @@ class Reports_Client implements Reports_Interface
    * retrieves the feed processing report
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionResult.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetFeedSubmissionResultRequest request
-   * or MarketplaceWebService_Model_GetFeedSubmissionResultRequest object itself
-   * @see MarketplaceWebService_Model_GetFeedSubmissionResult
-   * @return MarketplaceWebService_Model_GetFeedSubmissionResultResponse MarketplaceWebService_Model_GetFeedSubmissionResultResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResult
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultResponse \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultResponse
    *
    * @throws Reports_Exception
    */
   public function getFeedSubmissionResult($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetFeedSubmissionResultRequest) {
+    if (!$request instanceof Model\Reports_Model_GetFeedSubmissionResultRequest) {
       //require_once ('MarketplaceWebService/Model/GetFeedSubmissionResultRequest.php');
-      $request = new MarketplaceWebService_Model_GetFeedSubmissionResultRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionResultRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetFeedSubmissionResultResponse.php');
     $httpResponse = $this->invoke($this->convertGetFeedSubmissionResult($request), $request->getFeedSubmissionResult());
-    $response = Model\MarketplaceWebService_Model_GetFeedSubmissionResultResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetFeedSubmissionResultResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -588,22 +588,22 @@ class Reports_Client implements Reports_Interface
    * returns a list of feed submission identifiers and their associated metadata
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionList.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetFeedSubmissionListRequest request
-   * or MarketplaceWebService_Model_GetFeedSubmissionListRequest object itself
-   * @see MarketplaceWebService_Model_GetFeedSubmissionList
-   * @return MarketplaceWebService_Model_GetFeedSubmissionListResponse MarketplaceWebService_Model_GetFeedSubmissionListResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionList
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResponse \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListResponse
    *
    * @throws Reports_Exception
    */
   public function getFeedSubmissionList($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetFeedSubmissionListRequest) {
+    if (!$request instanceof Model\Reports_Model_GetFeedSubmissionListRequest) {
       //require_once ('MarketplaceWebService/Model/GetFeedSubmissionListRequest.php');
-      $request = new MarketplaceWebService_Model_GetFeedSubmissionListRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetFeedSubmissionListRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetFeedSubmissionListResponse.php');
     $httpResponse = $this->invoke($this->convertGetFeedSubmissionList($request));
-    $response = Model\MarketplaceWebService_Model_GetFeedSubmissionListResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetFeedSubmissionListResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -613,22 +613,22 @@ class Reports_Client implements Reports_Interface
    * returns a list of report requests ids and their associated metadata
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportRequestList.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportRequestListRequest request
-   * or MarketplaceWebService_Model_GetReportRequestListRequest object itself
-   * @see MarketplaceWebService_Model_GetReportRequestList
-   * @return MarketplaceWebService_Model_GetReportRequestListResponse MarketplaceWebService_Model_GetReportRequestListResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestList
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListResponse
    *
    * @throws Reports_Exception
    */
   public function getReportRequestList($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportRequestListRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportRequestListRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportRequestListRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportRequestListRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestListRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportRequestListResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportRequestList($request));
-    $response = Model\MarketplaceWebService_Model_GetReportRequestListResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportRequestListResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -638,22 +638,22 @@ class Reports_Client implements Reports_Interface
    * retrieve the next batch of list items and if there are more items to retrieve
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportScheduleListByNextToken.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest request
-   * or MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest object itself
-   * @see MarketplaceWebService_Model_GetReportScheduleListByNextToken
-   * @return MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextToken
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenResponse
    *
    * @throws Reports_Exception
    */
   public function getReportScheduleListByNextToken($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportScheduleListByNextTokenRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportScheduleListByNextTokenRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportScheduleListByNextTokenRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListByNextTokenRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportScheduleListByNextTokenResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportScheduleListByNextToken($request));
-    $response = Model\MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportScheduleListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -663,22 +663,22 @@ class Reports_Client implements Reports_Interface
    * retrieve the next batch of list items and if there are more items to retrieve
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportListByNextToken.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportListByNextTokenRequest request
-   * or MarketplaceWebService_Model_GetReportListByNextTokenRequest object itself
-   * @see MarketplaceWebService_Model_GetReportListByNextToken
-   * @return MarketplaceWebService_Model_GetReportListByNextTokenResponse MarketplaceWebService_Model_GetReportListByNextTokenResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextToken
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenResponse
    *
    * @throws Reports_Exception
    */
   public function getReportListByNextToken($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportListByNextTokenRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportListByNextTokenRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportListByNextTokenRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportListByNextTokenRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportListByNextTokenRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportListByNextTokenResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportListByNextToken($request));
-    $response = Model\MarketplaceWebService_Model_GetReportListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -689,22 +689,22 @@ class Reports_Client implements Reports_Interface
    * for a given report type, such as order reports in particular.
    *
    * @see http://docs.amazonwebservices.com/${docPath}ManageReportSchedule.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_ManageReportScheduleRequest request
-   * or MarketplaceWebService_Model_ManageReportScheduleRequest object itself
-   * @see MarketplaceWebService_Model_ManageReportSchedule
-   * @return MarketplaceWebService_Model_ManageReportScheduleResponse MarketplaceWebService_Model_ManageReportScheduleResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_ManageReportSchedule
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleResponse \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleResponse
    *
    * @throws Reports_Exception
    */
   public function manageReportSchedule($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_ManageReportScheduleRequest) {
+    if (!$request instanceof Model\Reports_Model_ManageReportScheduleRequest) {
       //require_once ('MarketplaceWebService/Model/ManageReportScheduleRequest.php');
-      $request = new MarketplaceWebService_Model_ManageReportScheduleRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_ManageReportScheduleRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/ManageReportScheduleResponse.php');
     $httpResponse = $this->invoke($this->convertManageReportSchedule($request));
-    $response = Model\MarketplaceWebService_Model_ManageReportScheduleResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_ManageReportScheduleResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -715,22 +715,22 @@ class Reports_Client implements Reports_Interface
    * requests in the last 90 days
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportRequestCount.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportRequestCountRequest request
-   * or MarketplaceWebService_Model_GetReportRequestCountRequest object itself
-   * @see MarketplaceWebService_Model_GetReportRequestCount
-   * @return MarketplaceWebService_Model_GetReportRequestCountResponse MarketplaceWebService_Model_GetReportRequestCountResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCount
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountResponse
    *
    * @throws Reports_Exception
    */
   public function getReportRequestCount($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportRequestCountRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportRequestCountRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportRequestCountRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportRequestCountRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportRequestCountRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportRequestCountResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportRequestCount($request));
-    $response = Model\MarketplaceWebService_Model_GetReportRequestCountResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportRequestCountResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -740,22 +740,22 @@ class Reports_Client implements Reports_Interface
    * returns the list of report schedules
    *
    * @see http://docs.amazonwebservices.com/${docPath}GetReportScheduleList.html
-   * @param mixed $request array of parameters for MarketplaceWebService_Model_GetReportScheduleListRequest request
-   * or MarketplaceWebService_Model_GetReportScheduleListRequest object itself
-   * @see MarketplaceWebService_Model_GetReportScheduleList
-   * @return MarketplaceWebService_Model_GetReportScheduleListResponse MarketplaceWebService_Model_GetReportScheduleListResponse
+   * @param mixed $request array of parameters for \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListRequest request
+   * or \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListRequest object itself
+   * @see \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleList
+   * @return \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListResponse \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListResponse
    *
    * @throws Reports_Exception
    */
   public function getReportScheduleList($request)
   {
-    if (!$request instanceof Model\MarketplaceWebService_Model_GetReportScheduleListRequest) {
+    if (!$request instanceof Model\Reports_Model_GetReportScheduleListRequest) {
       //require_once ('MarketplaceWebService/Model/GetReportScheduleListRequest.php');
-      $request = new MarketplaceWebService_Model_GetReportScheduleListRequest($request);
+      $request = new \Amazon\MWS\Reports\Model\Reports_Model_GetReportScheduleListRequest($request);
     }
     //require_once ('MarketplaceWebService/Model/GetReportScheduleListResponse.php');
     $httpResponse = $this->invoke($this->convertGetReportScheduleList($request));
-    $response = Model\MarketplaceWebService_Model_GetReportScheduleListResponse::fromXML($httpResponse['ResponseBody']);
+    $response = Model\Reports_Model_GetReportScheduleListResponse::fromXML($httpResponse['ResponseBody']);
     $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
     return $response;
   }
@@ -831,7 +831,7 @@ class Reports_Client implements Reports_Interface
           	case 500:
           	case 503:
           		//require_once('MarketplaceWebService/Model/ErrorResponse.php');
-		          $errorResponse = MarketplaceWebService_Model_ErrorResponse::fromXML($response['ResponseBody']);
+		          $errorResponse = \Amazon\MWS\Reports\Model\Reports_Model_ErrorResponse::fromXML($response['ResponseBody']);
 		          
 		          // We will not retry throttling errors since this would just add to the throttling problem.
 		          $shouldRetry = ($errorResponse->getError()->getCode() === 'RequestThrottled')
@@ -923,7 +923,7 @@ class Reports_Client implements Reports_Interface
     $parsedHeader = $this->parseHttpHeader($header);
 
     //require_once('MarketplaceWebService/Model/ResponseHeaderMetadata.php');
-    $responseHeaderMetadata = new MarketplaceWebService_Model_ResponseHeaderMetadata(
+    $responseHeaderMetadata = new \Amazon\MWS\Reports\Model\Reports_Model_ResponseHeaderMetadata(
               $parsedHeader['x-mws-request-id'],
               $parsedHeader['x-mws-response-context'],
               $parsedHeader['x-mws-timestamp']);
@@ -1171,7 +1171,7 @@ class Reports_Client implements Reports_Interface
   private function addRequiredParameters(array $parameters)
   {
     $parameters['AWSAccessKeyId'] = $this->awsAccessKeyId;
-    $parameters['Timestamp'] = $this->getFormattedTimestamp(new DateTime('now', new DateTimeZone('UTC')));
+    $parameters['Timestamp'] = $this->getFormattedTimestamp(new \DateTime('now', new \DateTimeZone('UTC')));
     $parameters['Version'] = self::SERVICE_VERSION;
     $parameters['SignatureVersion'] = $this->config['SignatureVersion'];
     if ($parameters['SignatureVersion'] > 1) {
@@ -1297,12 +1297,12 @@ class Reports_Client implements Reports_Interface
   private function getFormattedTimestamp($dateTime) {
     if (!is_object($dateTime)) {
       if (is_string($dateTime)) {
-        $dateTime = new DateTime($dateTime);
+        $dateTime = new \DateTime($dateTime);
       } else {
         throw new \Exception("Invalid date value.");
       }
     } else {
-      if (!($dateTime instanceof DateTime)) {
+      if (!($dateTime instanceof \DateTime)) {
         throw new \Exception("Invalid date value.");
       }
     }

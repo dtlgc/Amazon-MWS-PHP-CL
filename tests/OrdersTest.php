@@ -10,8 +10,8 @@ class MarketplaceWebServiceOrders_ClientTest extends PHPUnit_Framework_TestCase
 {
 	function testGetOrder()
 	{
-		$dotenv = new Dotenv();
 		$root = dirname(dirname(__FILE__));
+		$dotenv = new \Dotenv\Dotenv($root);
 		$dotenv->load($root);
 		$dotenv->required(['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'APPLICATION_NAME', 'APPLICATION_VERSION']);
 
